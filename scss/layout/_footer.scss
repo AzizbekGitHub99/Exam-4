@@ -1,0 +1,84 @@
+@use "../utils/variables" as var;
+
+footer {
+  background: url(../../assets/images/footer-background.png);
+  background-color: #f9f4e2;
+}
+
+.footer {
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  @media (max-width: 1070px) {
+    flex-direction: column;
+  }
+  @media (max-width: 780px) {
+    flex-direction: row;
+  }
+  @media (max-width: 460px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    @media (max-width: 780px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+    a {
+      color: var.$text-color;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+  &__end {
+    display: flex;
+    gap: 40px;
+    @media (max-width: 560px) {
+      flex-direction: column;
+    }
+    .phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+  &__brands {
+    display: flex;
+    gap: 16px;
+    @media (max-width: 780px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 560px) {
+      gap: 10px;
+      grid-template-columns: repeat(2, auto);
+    }
+    @media (max-width: 450px) {
+        display: flex;
+    }
+  }
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 56px;
+  gap: 8px;
+  @media (max-width: 450px) {
+    justify-content: center;
+  }
+  p {
+    color: var.$text-color;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}

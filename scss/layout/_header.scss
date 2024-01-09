@@ -1,0 +1,202 @@
+@use "../utils/variables" as var;
+
+header {
+  height: 72px;
+  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 0;
+  left: 0;
+  background-color: var.$white-color;
+  z-index: 1;
+  .nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    @media (max-width: 830px) {
+      gap: 15px;
+    }
+    &__logo {
+      .logo-mini {
+        display: none;
+        @media (max-width: 1030px) {
+          display: inline;
+        }
+      }
+      .logo-original {
+        display: inline;
+        @media (max-width: 1030px) {
+          display: none;
+        }
+      }
+    }
+    &__row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      &__items {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        text-align: center;
+        margin-left: 30px;
+        @media (max-width: 800px) {
+          gap: 13px;
+        }
+        @media (max-width: 780px) {
+          margin-left: 0;
+        }
+        @media (max-width: 700px) {
+          display: none;
+        }
+        h6 {
+          color: var.$text-color;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 150%;
+        }
+      }
+    }
+    &__toggle {
+      padding: 8px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      background-color: var.$secondary-color;
+      border-radius: 4px;
+      @media (max-width: 700px) {
+        display: none;
+      }
+      span {
+        width: 92px;
+        height: 24px;
+        color: var.$white-color;
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        @media (max-width: 930px) {
+          display: none;
+        }
+      }
+    }
+    &__search {
+      width: 360px;
+      position: relative;
+      @media (max-width: 1090px) {
+        width: 300px;
+      }
+      @media (max-width: 750px) {
+        width: 280px;
+      }
+      @media (max-width: 370px) {
+        width: 250px;
+      }
+      @media (max-width: 330px) {
+        width: 200px;
+      }
+      input {
+        padding: 8px 0;
+        width: 100%;
+        outline: none;
+        border: 2px solid var.$secondary-color;
+        border-radius: 4px;
+        padding-left: 8px;
+      }
+      img {
+        position: absolute;
+        right: 8px;
+        top: 5px;
+      }
+    }
+    &__end {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: 15px;
+      img {
+        @media (max-width: 700px) {
+          display: none;
+        }
+      }
+      @media (max-width: 1180px) {
+        gap: 0;
+      }
+      @media (max-width: 700px) {
+        margin-left: 0;
+      }
+      h1 {
+        color: var.$text-color2;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        @media (max-width: 1180px) {
+          display: none;
+        }
+      }
+      button {
+        padding: 8px;
+        background-color: transparent;
+        img {
+          @media (max-width: 730px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .nav__items__basket {
+    position: relative;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      right: 10px;
+      top: -5px;
+      font-size: 8px;
+      border-radius: 16px;
+      color: var.$white-color;
+      background-color: var.$primary-color;
+    }
+  }
+}
+
+#header__bottom {
+  @media (min-width: 700px) {
+    display: none;
+  }
+  height: 56px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: -3px;
+  .nav__bottom {
+    height: 100%;
+    &__row {
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+      }
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var.$text-color;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 150%;
+        gap: 4px;
+      }
+    }
+  }
+}
