@@ -4,9 +4,210 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/about.min.css" />
   </head>
   <body>
-    <h1>WELCOME to About</h1>
-    <a href="/index.html">← Go Home Page </a>
+    <header>
+      <nav class="nav container__1250">
+        <div class="nav__logo">
+          <img
+            class="logo-original"
+            src="../assets/images/logo.svg"
+            alt="logotip"
+          />
+          <img class="logo-mini" src="../assets/images/logo-mini.svg" alt="" />
+        </div>
+        <div class="nav__row">
+          <button class="nav__toggle">
+            <img src="../assets/images/menu.svg" alt="" /> <span>Каталог</span>
+            <div class="katalog">
+              <a href="products.html">Все продукты</a>
+              <a href="categories.html">Категории </a>
+              <a href="category.html">Категория </a>
+              <a href="product.html">Товар </a>
+              <a href="favorite.html">Избраное </a>
+              <a href="cart.html">Корзина </a>
+              <a href="about.html">О нас</a>
+              <a href="contact.html">Контакты </a>
+              <a href="vacancy.html">Вакансии </a>
+              <a href="articles.html">Статьи </a>
+            </div>
+          </button>
+          <form>
+            <div class="nav__search">
+              <input type="text" placeholder="Найти товар" />
+              <img src="../assets/images/search.svg" alt="" />
+            </div>
+          </form>
+          <ul class="nav__row__items">
+            <div class="nav__items__like">
+              <a href="pages/favorite.html">
+                <img src="../assets/images/like-icon.svg" alt="" />
+                <h6>Избранное</h6>
+              </a>
+            </div>
+            <div class="nav__items__product">
+              <a href="pages/product.html">
+                <img src="../assets/images/product-icon.svg" alt="" />
+                <h6>продукты</h6>
+              </a>
+            </div>
+            <div class="nav__items__basket">
+              <span class="plus">0</span>
+              <a href="pages/cart.html">
+                <img src="../assets/images/basket.svg" alt="" />
+                <h6>Корзина</h6>
+              </a>
+            </div>
+          </ul>
+          <div class="nav__end">
+            <img src="../assets/images/nav-avatar.svg" alt="" />
+            <h1>Алексей</h1>
+            <button><img src="../assets/images/nav-down.svg" alt="" /></button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <header id="header__bottom">
+      <nav class="container__1250 nav__bottom">
+        <ul class="nav__bottom__row">
+          <li>
+            <button>
+              <img src="../assets/images/menu-bottom.svg" alt="" />Каталог
+            </button>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../assets/images/like-icon.svg" alt="" />Избранное</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../assets/images/product-icon.svg" alt="" />Заказы</a
+            >
+          </li>
+          <li class="basket__zero">
+            <span class="plus2">0</span>
+            <a href="#"
+              ><img src="../assets/images/basket.svg" alt="" />Корзина</a
+            >
+          </li>
+          <li>
+            <img src="../assets/images/nav-avatar.svg" alt="" />
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <section id="hero">
+        <div class="container__1250 hero">
+          <div class="hero__left">
+            <h1 class="hero__title">О компании</h1>
+            <p class="hero__paragraph">
+              Мы непрерывно развиваемся и работаем над совершенствованием
+              сервиса, заботимся о наших клиентах, стремимся к лучшему будущему.
+            </p>
+          </div>
+          <div class="hero__right">
+            <img src="../assets/images/about-hero.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="container__1250 about">
+          <div class="about__row">
+            <div class="about__items">
+              <h6>
+                <img src="../assets/images/check.svg" alt="" /> Мы занимаемся
+                розничной торговлей
+              </h6>
+              <p>Более 20 лет.</p>
+            </div>
+            <div class="about__items">
+              <h6>
+                <img src="../assets/images/check.svg" alt="" />Основная миссия
+                компании
+              </h6>
+              <p>Максимальное качество товаров и услуг по доступной цене.</p>
+            </div>
+            <div class="about__items">
+              <h6>
+                <img src="../assets/images/check.svg" alt="" />Отличительная
+                черта нашей сети
+              </h6>
+              <p>
+                Здоровая и полезная продукция местного производства внаших
+                магазинах.
+              </p>
+            </div>
+          </div>
+          <div class="about__bottom">
+            <img src="../assets/images/big-logo.svg" alt="" />
+            <div class="about__bottom__right">
+              <img
+                class="uchburchak-1"
+                src="../assets/images/uchburchak.svg"
+                alt=""
+              />
+              <img
+                class="uchburchak-2"
+                src="../assets/images/uchburchak2.svg"
+                alt=""
+              />
+              <h3>Спасибо за то, что вы с нами. Северяночка, везет всегда!</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container__1250 footer">
+        <ul class="footer__list">
+          <li class="footer__logo">
+            <a href="#">
+              <img src="../assets/images/footer-logo.svg" alt="" />
+            </a>
+          </li>
+          <li class="footer__items">
+            <a href="pages/about.html">О компании</a>
+          </li>
+          <li class="footer__items">
+            <a href="pages/contact.html">Контакты</a>
+          </li>
+          <li class="footer__items">
+            <a href="pages/vacancy.html">Вакансии</a>
+          </li>
+          <li class="footer__items"><a href="pages/vacancy.html">Статьи</a></li>
+          <li class="footer__items">
+            <a href="pages/articles.html"
+              >Политика обработки персональных данных</a
+            >
+          </li>
+        </ul>
+        <div class="footer__end">
+          <div class="footer__brands">
+            <img src="../assets/images/instagram.svg" alt="" />
+            <img src="../assets/images/vkontakte.svg" alt="" />
+            <img src="../assets/images/facebook.svg" alt="" />
+            <img src="../assets/images/ok.svg" alt="" />
+          </div>
+          <div class="phone">
+            <a href="pages/contact.html">
+              <img src="../assets/images/phone.svg" alt="" />
+            </a>
+            <p>8 800 777 33 33</p>
+          </div>
+        </div>
+      </div>
+      <div class="container__1250 footer__bottom">
+        <p>Дизайн</p>
+        <img src="../assets/images/logo-zasovskiy-small-black.svg" alt="" />
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
   </body>
 </html>

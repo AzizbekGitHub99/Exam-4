@@ -43,7 +43,7 @@ header {
   right: 0;
   left: 0;
   background-color: #fff;
-  z-index: 1;
+  z-index: 100;
 }
 header .nav {
   height: 100%;
@@ -118,6 +118,8 @@ header .nav__row__items h6 {
   line-height: 150%;
 }
 header .nav__toggle {
+  overflow: hidden;
+  position: relative;
   padding: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -313,6 +315,52 @@ header .nav__items__basket span {
   font-weight: 400;
   line-height: 150%;
   gap: 4px;
+}
+#header__bottom .nav__bottom__row .basket__zero {
+  position: relative;
+}
+#header__bottom .nav__bottom__row span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  font-size: 8px;
+  border-radius: 16px;
+  color: #fff;
+  background-color: #f63;
+}
+
+.katalog {
+  width: 823px;
+  top: 40px;
+  left: 0;
+  position: absolute;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  border-radius: 4px;
+  background-color: #f63;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+.katalog a {
+  color: #fff;
+}
+.katalog a:hover {
+  color: #000;
 }
 
 footer {
@@ -656,6 +704,28 @@ footer {
   border-color: #f63;
 }
 
+#hearted,
+#hearted-1,
+#hearted-2,
+#hearted-3,
+#hearted-4,
+#hearted-5,
+#hearted-6,
+#hearted-7,
+#hearted-8,
+#hearted-9,
+#hearted-10,
+#hearted-11 {
+  display: none;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  opacity: 0.5;
+  background: var(--Grayscale-Lightest, #f3f2f1);
+}
+
 #news {
   background-color: #fbf8ec;
 }
@@ -827,17 +897,17 @@ footer {
         flex-wrap: wrap;
   }
 }
-.map__row button:nth-child(1) {
-  background-color: #70c05b;
-  color: #fff;
-}
-.map__row button {
+.map__row .map__btn {
   color: #000;
   padding: 8px;
   font-size: 12px;
   font-weight: 400;
   line-height: 150%;
   border-radius: 4px;
+}
+.map__row .map__btn:hover {
+  background-color: #70c05b;
+  color: #fff;
 }
 .map iframe {
   width: 100%;

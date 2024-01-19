@@ -1,3 +1,147 @@
-.a {
-  text-decoration-line:none;
+@use "../global";
+@use "../utils/variables" as var;
+
+main {
+  background-color: #fbf8ec;
+}
+
+#hero {
+  padding-top: 100px;
+}
+
+.hero {
+  &__top {
+    padding-bottom: 30px;
+  }
+  &__top-1 {
+    color: black;
+    font-weight: 700;
+  }
+  &__top-2 {
+    color: var.$text-color;
+  }
+  &__center-1 {
+    color: var.$text-color;
+    font-size: 48px;
+    font-weight: 700;
+    padding-bottom: 40px;
+  }
+  &__card {
+    max-width: 376px;
+    padding: 25px;
+    background-color: white;
+    h1 {
+      color: var.$text-color;
+      font-weight: 600;
+      padding-bottom: 15px;
+    }
+    p {
+      color: var.$text-color;
+      line-height: 24px;
+      padding-bottom: 10px;
+    }
+  }
+  &__card-1 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    h3 {
+      color: var.$text-color;
+      font-weight: 400;
+      text-decoration: underline;
+    }
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 1000px) {
+  .footer__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    overflow: hidden;
+  }
+  .footer__icon {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .nav__logo {
+    display: none;
+  }
+  .nav__logo-768 {
+    display: flex;
+  }
+  .nav__btn-1 {
+    display: none;
+  }
+  .nav__btn-2 {
+    display: flex;
+  }
+  .nav__login-1 {
+    display: flex;
+  }
+  .nav__login {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .nav__list-1 {
+    display: none;
+  }
+  .footer__all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__icon {
+    padding: 0;
+  }
+  .footer__logo {
+    margin: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .nav__input input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav__login-1 {
+    display: none;
+  }
+  .nav__btn-2 {
+    display: none;
+  }
+  .nav__res {
+    display: inline;
+  }
+  .nav__all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  .hero__row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

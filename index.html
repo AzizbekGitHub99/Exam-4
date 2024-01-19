@@ -26,6 +26,18 @@
         <div class="nav__row">
           <button class="nav__toggle">
             <img src="assets/images/menu.svg" alt="" /> <span>Каталог</span>
+            <div class="katalog">
+              <a href="pages/products.html">Все продукты</a>
+              <a href="pages/categories.html">Категории </a>
+              <a href="pages/category.html">Категория </a>
+              <a href="pages/product.html">Товар </a>
+              <a href="pages/favorite.html">Избраное </a>
+              <a href="pages/cart.html">Корзина </a>
+              <a href="pages/about.html">О нас</a>
+              <a href="pages/contact.html">Контакты </a>
+              <a href="pages/vacancy.html">Вакансии </a>
+              <a href="pages/articles.html">Статьи </a>
+            </div>
           </button>
           <form>
             <div class="nav__search">
@@ -80,10 +92,9 @@
               ><img src="assets/images/product-icon.svg" alt="" />Заказы</a
             >
           </li>
-          <li>
-            <a href="/pages/cart.html"
-              ><img src="assets/images/basket.svg" alt="" />Корзина</a
-            >
+          <li class="basket__zero">
+            <span class="plus2">0</span>
+            <a href="#"><img src="assets/images/basket.svg" alt="" />Корзина</a>
           </li>
           <li>
             <img src="assets/images/nav-avatar.svg" alt="" />
@@ -91,7 +102,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="main">
       <section id="hero">
         <div class="container__1250 hero">
           <img src="assets/images/hero-img.png" alt="" />
@@ -110,7 +121,10 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card1.png" alt="" />
-                <button>
+                <button
+                  onclick="document.getElementById('card__heart').style.display='none';
+                  document.getElementById('hearted').style.display='inline';"
+                >
                   <svg
                     id="card__heart"
                     width="50"
@@ -126,6 +140,12 @@
                       fill="current-color"
                     />
                   </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted').style.display='none';
+                  document.getElementById('card__heart').style.display='inline';"
+                >
+                  <img id="hearted" src="assets/images/hearted.svg" alt="" />
                 </button>
                 <span>-50%</span>
               </div>
@@ -152,7 +172,10 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card2.png" alt="" />
-                <button>
+                <button
+                  onclick="document.getElementById('card__heart-1').style.display='none';
+                  document.getElementById('hearted-1').style.display='inline';"
+                >
                   <svg
                     id="card__heart-1"
                     width="50"
@@ -168,6 +191,12 @@
                       fill="current-color"
                     />
                   </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-1').style.display='none';
+                  document.getElementById('card__heart-1').style.display='inline';"
+                >
+                  <img id="hearted-1" src="assets/images/hearted.svg" alt="" />
                 </button>
                 <span>-50%</span>
               </div>
@@ -194,7 +223,10 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card3.png" alt="" />
-                <button>
+                <button
+                  onclick="document.getElementById('card__heart-2').style.display='none';
+                  document.getElementById('hearted-2').style.display='inline';"
+                >
                   <svg
                     id="card__heart-2"
                     width="50"
@@ -210,6 +242,12 @@
                       fill="current-color"
                     />
                   </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-2').style.display='none';
+                  document.getElementById('card__heart-2').style.display='inline';"
+                >
+                  <img id="hearted-2" src="assets/images/hearted.svg" alt="" />
                 </button>
                 <span>-50%</span>
               </div>
@@ -236,7 +274,10 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card4.png" alt="" />
-                <button>
+                <button
+                  onclick="document.getElementById('card__heart-3').style.display='none';
+                  document.getElementById('hearted-3').style.display='inline';"
+                >
                   <svg
                     id="card__heart-3"
                     width="50"
@@ -252,6 +293,12 @@
                       fill="current-color"
                     />
                   </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-3').style.display='none';
+                  document.getElementById('card__heart-3').style.display='inline';"
+                >
+                  <img id="hearted-3" src="assets/images/hearted.svg" alt="" />
                 </button>
                 <span>-50%</span>
               </div>
@@ -290,7 +337,10 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card5.png" alt="" />
-                <button>
+                <button
+                  onclick="document.getElementById('card__heart-4').style.display='none';
+                  document.getElementById('hearted-4').style.display='inline';"
+                >
                   <svg
                     id="card__heart-4"
                     width="50"
@@ -306,6 +356,12 @@
                       fill="current-color"
                     />
                   </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-4').style.display='none';
+                  document.getElementById('card__heart-4').style.display='inline';"
+                >
+                  <img id="hearted-4" src="assets/images/hearted.svg" alt="" />
                 </button>
                 <span>-50%</span>
               </div>
@@ -327,7 +383,10 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card3.png" alt="" />
-                <button>
+                <button
+                  onclick="document.getElementById('card__heart-5').style.display='none';
+                  document.getElementById('hearted-5').style.display='inline';"
+                >
                   <svg
                     id="card__heart-5"
                     width="50"
@@ -343,6 +402,12 @@
                       fill="current-color"
                     />
                   </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-5').style.display='none';
+                  document.getElementById('card__heart-5').style.display='inline';"
+                >
+                  <img id="hearted-5" src="assets/images/hearted.svg" alt="" />
                 </button>
                 <span>-50%</span>
               </div>
@@ -364,7 +429,10 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card4.png" alt="" />
-                <button>
+                <button
+                  onclick="document.getElementById('card__heart-6').style.display='none';
+                  document.getElementById('hearted-6').style.display='inline';"
+                >
                   <svg
                     id="card__heart-6"
                     width="50"
@@ -380,6 +448,12 @@
                       fill="current-color"
                     />
                   </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-6').style.display='none';
+                  document.getElementById('card__heart-6').style.display='inline';"
+                >
+                  <img id="hearted-6" src="assets/images/hearted.svg" alt="" />
                 </button>
                 <span>-50%</span>
               </div>
@@ -401,7 +475,10 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card2.png" alt="" />
-                <button>
+                <button
+                  onclick="document.getElementById('card__heart-7').style.display='none';
+                  document.getElementById('hearted-7').style.display='inline';"
+                >
                   <svg
                     id="card__heart-7"
                     width="50"
@@ -417,6 +494,12 @@
                       fill="current-color"
                     />
                   </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-7').style.display='none';
+                  document.getElementById('card__heart-7').style.display='inline';"
+                >
+                  <img id="hearted-7" src="assets/images/hearted.svg" alt="" />
                 </button>
                 <span>-50%</span>
               </div>
@@ -450,7 +533,10 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card6.png" alt="" />
-                <button>
+                <button
+                  onclick="document.getElementById('card__heart-8').style.display='none';
+                  document.getElementById('hearted-8').style.display='inline';"
+                >
                   <svg
                     id="card__heart-8"
                     width="50"
@@ -466,6 +552,12 @@
                       fill="current-color"
                     />
                   </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-8').style.display='none';
+                  document.getElementById('card__heart-8').style.display='inline';"
+                >
+                  <img id="hearted-8" src="assets/images/hearted.svg" alt="" />
                 </button>
                 <span>-50%</span>
               </div>
@@ -487,7 +579,10 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card3.png" alt="" />
-                <button>
+                <button
+                  onclick="document.getElementById('card__heart-9').style.display='none';
+                  document.getElementById('hearted-9').style.display='inline';"
+                >
                   <svg
                     id="card__heart-9"
                     width="50"
@@ -503,6 +598,12 @@
                       fill="current-color"
                     />
                   </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-9').style.display='none';
+                  document.getElementById('card__heart-9').style.display='inline';"
+                >
+                  <img id="hearted-9" src="assets/images/hearted.svg" alt="" />
                 </button>
                 <span>-50%</span>
               </div>
@@ -524,7 +625,10 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card5.png" alt="" />
-                <button>
+                <button
+                  onclick="document.getElementById('card__heart-10').style.display='none';
+                  document.getElementById('hearted-10').style.display='inline';"
+                >
                   <svg
                     id="card__heart-10"
                     width="50"
@@ -540,6 +644,12 @@
                       fill="current-color"
                     />
                   </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-10').style.display='none';
+                  document.getElementById('card__heart-10').style.display='inline';"
+                >
+                  <img id="hearted-10" src="assets/images/hearted.svg" alt="" />
                 </button>
                 <span>-50%</span>
               </div>
@@ -561,7 +671,10 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card2.png" alt="" />
-                <button>
+                <button
+                  onclick="document.getElementById('card__heart-11').style.display='none';
+                  document.getElementById('hearted-11').style.display='inline';"
+                >
                   <svg
                     id="card__heart-11"
                     width="50"
@@ -577,6 +690,12 @@
                       fill="current-color"
                     />
                   </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-11').style.display='none';
+                  document.getElementById('card__heart-11').style.display='inline';"
+                >
+                  <img id="hearted-11" src="assets/images/hearted.svg" alt="" />
                 </button>
                 <span>-50%</span>
               </div>
@@ -623,10 +742,10 @@
         <div class="container__1250 map">
           <h1 class="map__title">Наши магазины</h1>
           <div class="map__row">
-            <button>п.Щельяюр</button>
-            <button>д.Вертеп</button>
-            <button>с.Краснобор</button>
-            <button>д.Диюр</button>
+            <button class="map__btn">п.Щельяюр</button>
+            <button class="map__btn">д.Вертеп</button>
+            <button class="map__btn">с.Краснобор</button>
+            <button class="map__btn">д.Диюр</button>
           </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.073069253112!2d69.20123767587322!3d41.285514171313025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ba578f4f58d%3A0xd7a2ecf23413b7a0!2sNajot%20Ta&#39;lim%20Chilonzor%20Filial!5e0!3m2!1sen!2s!4v1704806152799!5m2!1sen!2s"
@@ -712,9 +831,7 @@
           <li class="footer__items">
             <a href="pages/vacancy.html">Вакансии</a>
           </li>
-          <li class="footer__items">
-            <a href="pages/articles.html">Статьи</a>
-          </li>
+          <li class="footer__items"><a href="pages/vacancy.html">Статьи</a></li>
           <li class="footer__items">
             <a href="pages/articles.html"
               >Политика обработки персональных данных</a

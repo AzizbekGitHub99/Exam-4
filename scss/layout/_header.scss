@@ -7,7 +7,7 @@ header {
   right: 0;
   left: 0;
   background-color: var.$white-color;
-  z-index: 1;
+  z-index: 100;
   .nav {
     height: 100%;
     display: flex;
@@ -58,6 +58,8 @@ header {
       }
     }
     &__toggle {
+      overflow: hidden;
+      position: relative;
       padding: 8px;
       display: flex;
       gap: 8px;
@@ -197,6 +199,45 @@ header {
         line-height: 150%;
         gap: 4px;
       }
+      .basket__zero {
+        position: relative;
+      }
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        right: 5px;
+        top: -5px;
+        font-size: 8px;
+        border-radius: 16px;
+        color: var.$white-color;
+        background-color: var.$primary-color;
+      }
     }
+  }
+}
+
+.katalog {
+  // width: 200px;
+  width: 823px;
+  top: 40px;
+  left: 0;
+  position: absolute;
+  padding: 30px;
+  display: flex;
+  // flex-direction: column;
+  gap: 20px;
+  border-radius: 4px;
+  background-color: var.$primary-color;
+  transition: 0.5s;
+  opacity: 0;
+  a {
+    color: var.$white-color;
+  }
+  a:hover {
+    color: var.$black-color;
   }
 }
