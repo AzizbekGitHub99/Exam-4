@@ -34,3 +34,17 @@ toggle.addEventListener("click", () => {
     menu.style.opacity = "0";
   }
 });
+
+// HEADER BOTTOM KATALOG
+
+const katalogBottom = document.querySelector(".katalog__bottom");
+const toggleBottom = document.querySelector(".toggle__bottom");
+
+toggleBottom.addEventListener("click", () => {
+  isOpen = !isOpen;
+  if (isOpen) {
+    katalogBottom.style.bottom = "0";
+  } else {
+    katalogBottom.style.bottom = "-200px";
+  }
+});

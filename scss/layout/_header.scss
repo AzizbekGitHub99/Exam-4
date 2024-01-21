@@ -221,14 +221,12 @@ header {
 }
 
 .katalog {
-  // width: 200px;
   width: 823px;
   top: 40px;
   left: 0;
   position: absolute;
   padding: 30px;
   display: flex;
-  // flex-direction: column;
   gap: 20px;
   border-radius: 4px;
   background-color: var.$primary-color;
@@ -239,5 +237,27 @@ header {
   }
   a:hover {
     color: var.$black-color;
+  }
+}
+
+.katalog__bottom {
+  width: 100%;
+  height: 250px;
+  padding: 20px;
+  background-color: var.$primary-color;
+  position: fixed;
+  z-index: 10;
+  bottom: -200px;
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  transition: 0.5s;
+  border-radius: 8px;
+  @media (max-width: 700px) {
+    display: grid;
+  }
+  a {
+    font-size: 18px;
+    color: var.$white-color;
   }
 }

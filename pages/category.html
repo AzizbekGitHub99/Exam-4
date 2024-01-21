@@ -1,11 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-</head>
-<body>
-    <h1>WELCOME to Category</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/categories.min.css" />
+    <title>Category</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav container__1250">
+        <div class="nav__logo">
+          <img
+            class="logo-original"
+            src="../assets/images/logo.svg"
+            alt="logotip"
+          />
+          <img class="logo-mini" src="../assets/images/logo-mini.svg" alt="" />
+        </div>
+        <div class="nav__row">
+          <button class="nav__toggle">
+            <img src="../assets/images/menu.svg" alt="" /> <span>Каталог</span>
+            <div class="katalog">
+              <a href="products.html">Все продукты</a>
+              <a href="categories.html">Категории </a>
+              <a href="category.html">Категория </a>
+              <a href="product.html">Товар </a>
+              <a href="favorite.html">Избраное </a>
+              <a href="cart.html">Корзина </a>
+              <a href="about.html">О нас</a>
+              <a href="contact.html">Контакты </a>
+              <a href="vacancy.html">Вакансии </a>
+              <a href="articles.html">Статьи </a>
+            </div>
+          </button>
+          <form>
+            <div class="nav__search">
+              <input type="text" placeholder="Найти товар" />
+              <img src="../assets/images/search.svg" alt="" />
+            </div>
+          </form>
+          <ul class="nav__row__items">
+            <div class="nav__items__like">
+              <a href="pages/favorite.html">
+                <img src="../assets/images/like-icon.svg" alt="" />
+                <h6>Избранное</h6>
+              </a>
+            </div>
+            <div class="nav__items__product">
+              <a href="pages/product.html">
+                <img src="../assets/images/product-icon.svg" alt="" />
+                <h6>продукты</h6>
+              </a>
+            </div>
+            <div class="nav__items__basket">
+              <span class="plus">0</span>
+              <a href="pages/cart.html">
+                <img src="../assets/images/basket.svg" alt="" />
+                <h6>Корзина</h6>
+              </a>
+            </div>
+          </ul>
+          <div class="nav__end">
+            <img src="../assets/images/nav-avatar.svg" alt="" />
+            <h1>Алексей</h1>
+            <button><img src="../assets/images/nav-down.svg" alt="" /></button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <header id="header__bottom">
+      <nav class="container__1250 nav__bottom">
+        <ul class="nav__bottom__row">
+          <li>
+            <button>
+              <img src="../assets/images/menu-bottom.svg" alt="" />Каталог
+            </button>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../assets/images/like-icon.svg" alt="" />Избранное</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../assets/images/product-icon.svg" alt="" />Заказы</a
+            >
+          </li>
+          <li class="basket__zero">
+            <span class="plus2">0</span>
+            <a href="#"
+              ><img src="../assets/images/basket.svg" alt="" />Корзина</a
+            >
+          </li>
+          <li>
+            <img src="../assets/images/nav-avatar.svg" alt="" />
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
 </html>

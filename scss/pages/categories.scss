@@ -1,0 +1,102 @@
+@use "../global";
+@use "../utils/variables" as var;
+
+body {
+  background-color: var.$bgc-main;
+}
+
+.hero {
+  padding-top: 160px;
+  padding-bottom: 80px;
+  &__title {
+    color: var.$text-color;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 60px;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    @media (max-width: 760px) {
+      gap: 16px;
+    }
+    @media (max-width: 376px) {
+      gap: 80px;
+    }
+  }
+  &__item {
+    max-width: 272px;
+    position: relative;
+    @media (max-width: 600px) {
+      height: 140px;
+    }
+    @media (max-width: 760px) {
+      max-width: 160px;
+    }
+    @media (max-width: 376px) {
+      max-width: 272px;
+    }
+    img {
+      width: 100%;
+    }
+    &__effect {
+      display: flex;
+      align-items: end;
+      padding: 0 0 10px 10px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60%;
+      background: linear-gradient(
+        180deg,
+        rgba(112, 192, 91, 0) 0%,
+        #70c05b 82.81%
+      );
+      transition: 0.5s;
+      @media (max-width: 600px) {
+        height: 60%;
+      }
+      @media (max-width: 376px) {
+        bottom: -60px;
+      }
+    }
+    h4 {
+      color: var.$white-color;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 150%;
+      transition: 0.5s;
+    }
+  }
+  &__item:hover .hero__item__effect {
+    background: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #f63 100%);
+  }
+  &__item:hover h4 {
+    font-size: 25px;
+    color: black;
+  }
+  .item1,
+  .item10,
+  .item12 {
+    max-width: 584px;
+    @media (max-width: 760px) {
+      max-width: 336px;
+    }
+    @media (max-width: 376px) {
+      height: 200px;
+    }
+    img {
+      @media (max-width: 600px) {
+        height: 100%;
+      }
+    }
+    .hero__item__effect {
+      @media (max-width: 376px) {
+        bottom: 0;
+      }
+    }
+  }
+}

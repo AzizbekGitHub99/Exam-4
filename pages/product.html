@@ -1,11 +1,798 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-</head>
-<body>
-    <h1>WELCOME to Product</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/product.min.css" />
+    <title>PRODUCT</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav container__1250">
+        <div class="nav__logo">
+          <img
+            class="logo-original"
+            src="../assets/images/logo.svg"
+            alt="logotip"
+          />
+          <img class="logo-mini" src="../assets/images/logo-mini.svg" alt="" />
+        </div>
+        <div class="nav__row">
+          <button class="nav__toggle">
+            <img src="../assets/images/menu.svg" alt="" /> <span>Каталог</span>
+            <div class="katalog">
+              <a href="products.html">Все продукты</a>
+              <a href="categories.html">Категории </a>
+              <a href="category.html">Категория </a>
+              <a href="product.html">Товар </a>
+              <a href="favorite.html">Избраное </a>
+              <a href="cart.html">Корзина </a>
+              <a href="about.html">О нас</a>
+              <a href="contact.html">Контакты </a>
+              <a href="vacancy.html">Вакансии </a>
+              <a href="articles.html">Статьи </a>
+            </div>
+          </button>
+          <form>
+            <div class="nav__search">
+              <input type="text" placeholder="Найти товар" />
+              <img src="../assets/images/search.svg" alt="" />
+            </div>
+          </form>
+          <ul class="nav__row__items">
+            <div class="nav__items__like">
+              <a href="pages/favorite.html">
+                <img src="../assets/images/like-icon.svg" alt="" />
+                <h6>Избранное</h6>
+              </a>
+            </div>
+            <div class="nav__items__product">
+              <a href="pages/product.html">
+                <img src="../assets/images/product-icon.svg" alt="" />
+                <h6>продукты</h6>
+              </a>
+            </div>
+            <div class="nav__items__basket">
+              <span class="plus">0</span>
+              <a href="pages/cart.html">
+                <img src="../assets/images/basket.svg" alt="" />
+                <h6>Корзина</h6>
+              </a>
+            </div>
+          </ul>
+          <div class="nav__end">
+            <img src="../assets/images/nav-avatar.svg" alt="" />
+            <h1>Алексей</h1>
+            <button><img src="../assets/images/nav-down.svg" alt="" /></button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <header id="header__bottom">
+      <nav class="container__1250 nav__bottom">
+        <ul class="nav__bottom__row">
+          <li>
+            <button>
+              <img src="../assets/images/menu-bottom.svg" alt="" />Каталог
+            </button>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../assets/images/like-icon.svg" alt="" />Избранное</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../assets/images/product-icon.svg" alt="" />Заказы</a
+            >
+          </li>
+          <li class="basket__zero">
+            <span class="plus2">0</span>
+            <a href="#"
+              ><img src="../assets/images/basket.svg" alt="" />Корзина</a
+            >
+          </li>
+          <li>
+            <img src="../assets/images/nav-avatar.svg" alt="" />
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <section id="hero">
+        <div class="container__1250 hero">
+          <div class="hero__links">
+            <a href="../index.html"
+              >Главная <img src="../assets/images/chevron-right.svg" alt=""
+            /></a>
+            <a href="#"
+              >Каталог <img src="../assets/images/chevron-right.svg" alt=""
+            /></a>
+            <a href="#"
+              >Молоко, сыр, яйцо
+              <img src="../assets/images/chevron-right.svg" alt=""
+            /></a>
+            <p>
+              Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180
+              г
+            </p>
+          </div>
+          <p class="product__name">
+            Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г
+          </p>
+          <div class="product__rating">
+            <p class="product__code">арт. 371431</p>
+            <span class="rating__product__box">
+              <img src="../assets/images/rating-product.png" alt="" />
+              <p class="product__otziv">3 отзыва</p>
+            </span>
+            <button class="hero__share__btn">
+              <img src="../assets/images/share-icon.svg" alt="" /> Поделиться
+            </button>
+            <button class="hero__like__btn">
+              <img src="../assets/images/like-icon.svg" alt="" />В избраное
+            </button>
+          </div>
+          <div class="hero__product">
+            <div class="hero__product__left">
+              <div class="product__images">
+                <img
+                  class="product__mini1"
+                  src="../assets/images/product-mini.png"
+                  alt=""
+                />
+                <img
+                  class="product__mini1"
+                  src="../assets/images/product-mini.png"
+                  alt=""
+                />
+                <img
+                  class="product__mini1"
+                  src="../assets/images/product-mini.png"
+                  alt=""
+                />
+                <img
+                  class="product__mini1"
+                  src="../assets/images/product-mini.png"
+                  alt=""
+                />
+                <img
+                  class="product__mini1"
+                  src="../assets/images/product-mini.png"
+                  alt=""
+                />
+                <img
+                  class="product__mini2"
+                  src="../assets/images/product-mini2.png"
+                  alt=""
+                />
+                <img
+                  class="product__mini2"
+                  src="../assets/images/product-mini2.png"
+                  alt=""
+                />
+                <img
+                  class="product__mini2"
+                  src="../assets/images/product-mini2.png"
+                  alt=""
+                />
+                <img
+                  class="product__mini2"
+                  src="../assets/images/product-mini2.png"
+                  alt=""
+                />
+                <img
+                  class="product__mini2"
+                  src="../assets/images/product-mini2.png"
+                  alt=""
+                />
+              </div>
+              <div class="product__image">
+                <img
+                  class="product__big1"
+                  src="../assets/images/product-big.png"
+                  alt=""
+                />
+                <img
+                  class="product__big2"
+                  src="../assets/images/product-big2.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="hero__product__right">
+              <div class="hero__product__right__top">
+                <span>
+                  <h6>192,69 ₽</h6>
+                  <p>Обычная цена</p>
+                </span>
+                <span>
+                  <h4>108,99 ₽</h4>
+                  <p>
+                    С картой Северяночки
+                    <img src="../assets/images/info-icon.svg" alt="" />
+                  </p>
+                </span>
+              </div>
+              <div class="product__basket__btn">
+                <button>
+                  <img src="../assets/images/product-basket.svg" alt="" />
+                  <span>В корзину</span>
+                </button>
+              </div>
+              <div class="bonus">
+                <button>
+                  <img src="../assets/images/atom.svg" alt="" />
+                  Вы получаете 10 бонусов
+                </button>
+              </div>
+              <p class="notification">
+                <img src="../assets/images/notification.svg" alt="" />
+                Уведомить о снижении цены
+              </p>
+              <div class="hero__product__right__bottom">
+                <span>
+                  <p>Бренд</p>
+                  <h6>ПРОСТОКВАШИНО</h6>
+                </span>
+                <span>
+                  <p>Страна производителя</p>
+                  <h6>Россия</h6>
+                </span>
+                <span>
+                  <p>Упаковка</p>
+                  <h6>180 г</h6>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="similar">
+        <div class="container__1250 similar">
+          <h4 class="similar__title">Похожие</h4>
+          <div class="similar__row">
+            <div class="similar__card">
+              <img
+                class="similar__img__big"
+                src="../assets/images/product-similar1.png"
+                alt=""
+              />
+              <img
+                class="similar__img__mini"
+                src="../assets/images/product-similar-mini1.png"
+                alt=""
+              />
+              <p>331,50 ₽</p>
+            </div>
+            <div class="similar__card">
+              <img
+                class="similar__img__big"
+                src="../assets/images/product-similar2.png"
+                alt=""
+              />
+              <img
+                class="similar__img__mini"
+                src="../assets/images/product-similar-mini2.png"
+                alt=""
+              />
+              <p>154,50 ₽</p>
+            </div>
+            <div class="similar__card">
+              <img
+                class="similar__img__big"
+                src="../assets/images/product-similar3.png"
+                alt=""
+              />
+              <img
+                class="similar__img__mini"
+                src="../assets/images/product-similar-mini3.png"
+                alt=""
+              />
+              <p>157,50 ₽</p>
+            </div>
+            <div class="similar__card">
+              <img
+                class="similar__img__big"
+                src="../assets/images/product-similar3.png"
+                alt=""
+              />
+              <img
+                class="similar__img__mini"
+                src="../assets/images/product-similar-mini3.png"
+                alt=""
+              />
+              <p>157,50 ₽</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="bought">
+        <div class="container__1250 bought">
+          <div class="news__top">
+            <h3 class="news__title bought__title">С этим товаров мокупают</h3>
+          </div>
+          <div class="promo__row">
+            <div class="promo__card">
+              <div class="promo__card__img">
+                <img src="../assets/images/promo-card6.png" alt="" />
+                <button
+                  onclick="document.getElementById('card__heart-8').style.display='none';
+                  document.getElementById('hearted-8').style.display='inline';"
+                >
+                  <svg
+                    id="card__heart-8"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 24 24"
+                    fill="current-color"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.7046 4.25644C13.8299 3.13067 15.3564 2.49817 16.9482 2.49817C18.5399 2.49817 20.0664 3.13063 21.1916 4.25636C22.3174 5.38164 22.95 6.90829 22.95 8.49999C22.95 10.0917 22.3175 11.6183 21.1917 12.7435C21.1917 12.7436 21.1917 12.7435 21.1917 12.7435L12.3517 21.5835C12.1565 21.7788 11.8399 21.7788 11.6446 21.5835L2.80461 12.7435C0.460963 10.3999 0.460963 6.60009 2.80461 4.25644C5.14826 1.91279 8.94807 1.91279 11.2917 4.25644L11.9982 4.96289L12.7046 4.25644C12.7046 4.25641 12.7046 4.25647 12.7046 4.25644ZM16.9482 3.49817C15.6217 3.49817 14.3496 4.02528 13.4118 4.96346L12.3517 6.02355C12.258 6.11732 12.1308 6.16999 11.9982 6.16999C11.8656 6.16999 11.7384 6.11732 11.6446 6.02355L10.5846 4.96355C8.63149 3.01042 5.46484 3.01042 3.51172 4.96355C1.55859 6.91667 1.55859 10.0833 3.51172 12.0364L11.9982 20.5229L20.4846 12.0364C21.4228 11.0987 21.95 9.82648 21.95 8.49999C21.95 7.17351 21.4229 5.90138 20.4847 4.96363C19.5469 4.02544 18.2747 3.49817 16.9482 3.49817Z"
+                      fill="current-color"
+                    />
+                  </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-8').style.display='none';
+                  document.getElementById('card__heart-8').style.display='inline';"
+                >
+                  <img
+                    id="hearted-8"
+                    src="../assets/images/hearted.svg"
+                    alt=""
+                  />
+                </button>
+                <span>-50%</span>
+              </div>
+              <div class="promo__card__content">
+                <div class="promo__card__top">
+                  <div class="promo__card__top__left">
+                    <h1>599,99 ₽</h1>
+                  </div>
+                </div>
+                <h5 class="promo__card__text">
+                  Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»
+                </h5>
+                <img src="../assets/images/rating2.svg" alt="" />
+                <div class="promo__card__btn">
+                  <button class="basket__btn">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div class="promo__card">
+              <div class="promo__card__img">
+                <img src="../assets/images/promo-card3.png" alt="" />
+                <button
+                  onclick="document.getElementById('card__heart-9').style.display='none';
+                  document.getElementById('hearted-9').style.display='inline';"
+                >
+                  <svg
+                    id="card__heart-9"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 24 24"
+                    fill="current-color"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.7046 4.25644C13.8299 3.13067 15.3564 2.49817 16.9482 2.49817C18.5399 2.49817 20.0664 3.13063 21.1916 4.25636C22.3174 5.38164 22.95 6.90829 22.95 8.49999C22.95 10.0917 22.3175 11.6183 21.1917 12.7435C21.1917 12.7436 21.1917 12.7435 21.1917 12.7435L12.3517 21.5835C12.1565 21.7788 11.8399 21.7788 11.6446 21.5835L2.80461 12.7435C0.460963 10.3999 0.460963 6.60009 2.80461 4.25644C5.14826 1.91279 8.94807 1.91279 11.2917 4.25644L11.9982 4.96289L12.7046 4.25644C12.7046 4.25641 12.7046 4.25647 12.7046 4.25644ZM16.9482 3.49817C15.6217 3.49817 14.3496 4.02528 13.4118 4.96346L12.3517 6.02355C12.258 6.11732 12.1308 6.16999 11.9982 6.16999C11.8656 6.16999 11.7384 6.11732 11.6446 6.02355L10.5846 4.96355C8.63149 3.01042 5.46484 3.01042 3.51172 4.96355C1.55859 6.91667 1.55859 10.0833 3.51172 12.0364L11.9982 20.5229L20.4846 12.0364C21.4228 11.0987 21.95 9.82648 21.95 8.49999C21.95 7.17351 21.4229 5.90138 20.4847 4.96363C19.5469 4.02544 18.2747 3.49817 16.9482 3.49817Z"
+                      fill="current-color"
+                    />
+                  </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-9').style.display='none';
+                  document.getElementById('card__heart-9').style.display='inline';"
+                >
+                  <img
+                    id="hearted-9"
+                    src="../assets/images/hearted.svg"
+                    alt=""
+                  />
+                </button>
+                <span>-50%</span>
+              </div>
+              <div class="promo__card__content">
+                <div class="promo__card__top">
+                  <div class="promo__card__top__left">
+                    <h1>44,50 ₽</h1>
+                  </div>
+                </div>
+                <h5 class="promo__card__text">
+                  Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
+                </h5>
+                <img src="../assets/images/rating3.svg" alt="" />
+                <div class="promo__card__btn">
+                  <button class="basket__btn">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div class="promo__card">
+              <div class="promo__card__img">
+                <img src="../assets/images/promo-card5.png" alt="" />
+                <button
+                  onclick="document.getElementById('card__heart-10').style.display='none';
+                  document.getElementById('hearted-10').style.display='inline';"
+                >
+                  <svg
+                    id="card__heart-10"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 24 24"
+                    fill="current-color"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.7046 4.25644C13.8299 3.13067 15.3564 2.49817 16.9482 2.49817C18.5399 2.49817 20.0664 3.13063 21.1916 4.25636C22.3174 5.38164 22.95 6.90829 22.95 8.49999C22.95 10.0917 22.3175 11.6183 21.1917 12.7435C21.1917 12.7436 21.1917 12.7435 21.1917 12.7435L12.3517 21.5835C12.1565 21.7788 11.8399 21.7788 11.6446 21.5835L2.80461 12.7435C0.460963 10.3999 0.460963 6.60009 2.80461 4.25644C5.14826 1.91279 8.94807 1.91279 11.2917 4.25644L11.9982 4.96289L12.7046 4.25644C12.7046 4.25641 12.7046 4.25647 12.7046 4.25644ZM16.9482 3.49817C15.6217 3.49817 14.3496 4.02528 13.4118 4.96346L12.3517 6.02355C12.258 6.11732 12.1308 6.16999 11.9982 6.16999C11.8656 6.16999 11.7384 6.11732 11.6446 6.02355L10.5846 4.96355C8.63149 3.01042 5.46484 3.01042 3.51172 4.96355C1.55859 6.91667 1.55859 10.0833 3.51172 12.0364L11.9982 20.5229L20.4846 12.0364C21.4228 11.0987 21.95 9.82648 21.95 8.49999C21.95 7.17351 21.4229 5.90138 20.4847 4.96363C19.5469 4.02544 18.2747 3.49817 16.9482 3.49817Z"
+                      fill="current-color"
+                    />
+                  </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-10').style.display='none';
+                  document.getElementById('card__heart-10').style.display='inline';"
+                >
+                  <img
+                    id="hearted-10"
+                    src="../assets/images/hearted.svg"
+                    alt=""
+                  />
+                </button>
+                <span>-50%</span>
+              </div>
+              <div class="promo__card__content">
+                <div class="promo__card__top">
+                  <div class="promo__card__top__left">
+                    <h1>159,99 ₽</h1>
+                  </div>
+                </div>
+                <h5 class="promo__card__text">
+                  Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»
+                </h5>
+                <img src="../assets/images/rating5.svg" alt="" />
+                <div class="promo__card__btn">
+                  <button class="basket__btn">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div class="promo__card">
+              <div class="promo__card__img">
+                <img src="../assets/images/promo-card2.png" alt="" />
+                <button
+                  onclick="document.getElementById('card__heart-11').style.display='none';
+                  document.getElementById('hearted-11').style.display='inline';"
+                >
+                  <svg
+                    id="card__heart-11"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 24 24"
+                    fill="current-color"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.7046 4.25644C13.8299 3.13067 15.3564 2.49817 16.9482 2.49817C18.5399 2.49817 20.0664 3.13063 21.1916 4.25636C22.3174 5.38164 22.95 6.90829 22.95 8.49999C22.95 10.0917 22.3175 11.6183 21.1917 12.7435C21.1917 12.7436 21.1917 12.7435 21.1917 12.7435L12.3517 21.5835C12.1565 21.7788 11.8399 21.7788 11.6446 21.5835L2.80461 12.7435C0.460963 10.3999 0.460963 6.60009 2.80461 4.25644C5.14826 1.91279 8.94807 1.91279 11.2917 4.25644L11.9982 4.96289L12.7046 4.25644C12.7046 4.25641 12.7046 4.25647 12.7046 4.25644ZM16.9482 3.49817C15.6217 3.49817 14.3496 4.02528 13.4118 4.96346L12.3517 6.02355C12.258 6.11732 12.1308 6.16999 11.9982 6.16999C11.8656 6.16999 11.7384 6.11732 11.6446 6.02355L10.5846 4.96355C8.63149 3.01042 5.46484 3.01042 3.51172 4.96355C1.55859 6.91667 1.55859 10.0833 3.51172 12.0364L11.9982 20.5229L20.4846 12.0364C21.4228 11.0987 21.95 9.82648 21.95 8.49999C21.95 7.17351 21.4229 5.90138 20.4847 4.96363C19.5469 4.02544 18.2747 3.49817 16.9482 3.49817Z"
+                      fill="current-color"
+                    />
+                  </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-11').style.display='none';
+                  document.getElementById('card__heart-11').style.display='inline';"
+                >
+                  <img
+                    id="hearted-11"
+                    src="../assets/images/hearted.svg"
+                    alt=""
+                  />
+                </button>
+                <span>-50%</span>
+              </div>
+              <div class="promo__card__content">
+                <div class="promo__card__top">
+                  <div class="promo__card__top__left">
+                    <h1>49,39 ₽</h1>
+                  </div>
+                </div>
+                <h5 class="promo__card__text">
+                  Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»
+                </h5>
+                <img src="../assets/images/rating4.5.svg" alt="" />
+                <div class="promo__card__btn">
+                  <button class="basket__btn">В корзину</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="promo">
+        <div class="container__1250 promo">
+          <div class="promo__top">
+            <h3 class="promo__title">Акции</h3>
+            <a href="pages/products.html"
+              >Все продукты <img src="../assets/images/arrow-right.png" alt=""
+            /></a>
+          </div>
+          <div class="promo__row">
+            <div class="promo__card">
+              <div class="promo__card__img">
+                <img src="../assets/images/promo-card1.png" alt="" />
+                <button
+                  onclick="document.getElementById('card__heart').style.display='none';
+                  document.getElementById('hearted').style.display='inline';"
+                >
+                  <svg
+                    id="card__heart"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 24 24"
+                    fill="current-color"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.7046 4.25644C13.8299 3.13067 15.3564 2.49817 16.9482 2.49817C18.5399 2.49817 20.0664 3.13063 21.1916 4.25636C22.3174 5.38164 22.95 6.90829 22.95 8.49999C22.95 10.0917 22.3175 11.6183 21.1917 12.7435C21.1917 12.7436 21.1917 12.7435 21.1917 12.7435L12.3517 21.5835C12.1565 21.7788 11.8399 21.7788 11.6446 21.5835L2.80461 12.7435C0.460963 10.3999 0.460963 6.60009 2.80461 4.25644C5.14826 1.91279 8.94807 1.91279 11.2917 4.25644L11.9982 4.96289L12.7046 4.25644C12.7046 4.25641 12.7046 4.25647 12.7046 4.25644ZM16.9482 3.49817C15.6217 3.49817 14.3496 4.02528 13.4118 4.96346L12.3517 6.02355C12.258 6.11732 12.1308 6.16999 11.9982 6.16999C11.8656 6.16999 11.7384 6.11732 11.6446 6.02355L10.5846 4.96355C8.63149 3.01042 5.46484 3.01042 3.51172 4.96355C1.55859 6.91667 1.55859 10.0833 3.51172 12.0364L11.9982 20.5229L20.4846 12.0364C21.4228 11.0987 21.95 9.82648 21.95 8.49999C21.95 7.17351 21.4229 5.90138 20.4847 4.96363C19.5469 4.02544 18.2747 3.49817 16.9482 3.49817Z"
+                      fill="current-color"
+                    />
+                  </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted').style.display='none';
+                  document.getElementById('card__heart').style.display='inline';"
+                >
+                  <img id="hearted" src="../assets/images/hearted.svg" alt="" />
+                </button>
+                <span>-50%</span>
+              </div>
+              <div class="promo__card__content">
+                <div class="promo__card__top">
+                  <div class="promo__card__top__left">
+                    <h1>44,50 ₽</h1>
+                    <p>С картой</p>
+                  </div>
+                  <div class="promo__card__top__right">
+                    <h2>50,50 ₽</h2>
+                    <p>Обычная</p>
+                  </div>
+                </div>
+                <h5 class="promo__card__text">
+                  Г/Ц Блинчики с мясом вес, Россия
+                </h5>
+                <img src="../assets/images/rating2.svg" alt="" />
+                <div class="promo__card__btn">
+                  <button class="basket__btn">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div class="promo__card">
+              <div class="promo__card__img">
+                <img src="../assets/images/promo-card2.png" alt="" />
+                <button
+                  onclick="document.getElementById('card__heart-1').style.display='none';
+                  document.getElementById('hearted-1').style.display='inline';"
+                >
+                  <svg
+                    id="card__heart-1"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 24 24"
+                    fill="current-color"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.7046 4.25644C13.8299 3.13067 15.3564 2.49817 16.9482 2.49817C18.5399 2.49817 20.0664 3.13063 21.1916 4.25636C22.3174 5.38164 22.95 6.90829 22.95 8.49999C22.95 10.0917 22.3175 11.6183 21.1917 12.7435C21.1917 12.7436 21.1917 12.7435 21.1917 12.7435L12.3517 21.5835C12.1565 21.7788 11.8399 21.7788 11.6446 21.5835L2.80461 12.7435C0.460963 10.3999 0.460963 6.60009 2.80461 4.25644C5.14826 1.91279 8.94807 1.91279 11.2917 4.25644L11.9982 4.96289L12.7046 4.25644C12.7046 4.25641 12.7046 4.25647 12.7046 4.25644ZM16.9482 3.49817C15.6217 3.49817 14.3496 4.02528 13.4118 4.96346L12.3517 6.02355C12.258 6.11732 12.1308 6.16999 11.9982 6.16999C11.8656 6.16999 11.7384 6.11732 11.6446 6.02355L10.5846 4.96355C8.63149 3.01042 5.46484 3.01042 3.51172 4.96355C1.55859 6.91667 1.55859 10.0833 3.51172 12.0364L11.9982 20.5229L20.4846 12.0364C21.4228 11.0987 21.95 9.82648 21.95 8.49999C21.95 7.17351 21.4229 5.90138 20.4847 4.96363C19.5469 4.02544 18.2747 3.49817 16.9482 3.49817Z"
+                      fill="current-color"
+                    />
+                  </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-1').style.display='none';
+                  document.getElementById('card__heart-1').style.display='inline';"
+                >
+                  <img
+                    id="hearted-1"
+                    src="../assets/images/hearted.svg"
+                    alt=""
+                  />
+                </button>
+                <span>-50%</span>
+              </div>
+              <div class="promo__card__content">
+                <div class="promo__card__top">
+                  <div class="promo__card__top__left">
+                    <h1>44,50 ₽</h1>
+                    <p>С картой</p>
+                  </div>
+                  <div class="promo__card__top__right">
+                    <h2>50,50 ₽</h2>
+                    <p>Обычная</p>
+                  </div>
+                </div>
+                <h5 class="promo__card__text">
+                  Г/Ц Блинчики с мясом вес, Россия
+                </h5>
+                <img src="../assets/images/rating3.svg" alt="" />
+                <div class="promo__card__btn">
+                  <button class="basket__btn">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div class="promo__card">
+              <div class="promo__card__img">
+                <img src="../assets/images/promo-card3.png" alt="" />
+                <button
+                  onclick="document.getElementById('card__heart-2').style.display='none';
+                  document.getElementById('hearted-2').style.display='inline';"
+                >
+                  <svg
+                    id="card__heart-2"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 24 24"
+                    fill="current-color"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.7046 4.25644C13.8299 3.13067 15.3564 2.49817 16.9482 2.49817C18.5399 2.49817 20.0664 3.13063 21.1916 4.25636C22.3174 5.38164 22.95 6.90829 22.95 8.49999C22.95 10.0917 22.3175 11.6183 21.1917 12.7435C21.1917 12.7436 21.1917 12.7435 21.1917 12.7435L12.3517 21.5835C12.1565 21.7788 11.8399 21.7788 11.6446 21.5835L2.80461 12.7435C0.460963 10.3999 0.460963 6.60009 2.80461 4.25644C5.14826 1.91279 8.94807 1.91279 11.2917 4.25644L11.9982 4.96289L12.7046 4.25644C12.7046 4.25641 12.7046 4.25647 12.7046 4.25644ZM16.9482 3.49817C15.6217 3.49817 14.3496 4.02528 13.4118 4.96346L12.3517 6.02355C12.258 6.11732 12.1308 6.16999 11.9982 6.16999C11.8656 6.16999 11.7384 6.11732 11.6446 6.02355L10.5846 4.96355C8.63149 3.01042 5.46484 3.01042 3.51172 4.96355C1.55859 6.91667 1.55859 10.0833 3.51172 12.0364L11.9982 20.5229L20.4846 12.0364C21.4228 11.0987 21.95 9.82648 21.95 8.49999C21.95 7.17351 21.4229 5.90138 20.4847 4.96363C19.5469 4.02544 18.2747 3.49817 16.9482 3.49817Z"
+                      fill="current-color"
+                    />
+                  </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-2').style.display='none';
+                  document.getElementById('card__heart-2').style.display='inline';"
+                >
+                  <img
+                    id="hearted-2"
+                    src="../assets/images/hearted.svg"
+                    alt=""
+                  />
+                </button>
+                <span>-50%</span>
+              </div>
+              <div class="promo__card__content">
+                <div class="promo__card__top">
+                  <div class="promo__card__top__left">
+                    <h1>44,50 ₽</h1>
+                    <p>С картой</p>
+                  </div>
+                  <div class="promo__card__top__right">
+                    <h2>50,50 ₽</h2>
+                    <p>Обычная</p>
+                  </div>
+                </div>
+                <h5 class="promo__card__text">
+                  Г/Ц Блинчики с мясом вес, Россия
+                </h5>
+                <img src="../assets/images/rating5.svg" alt="" />
+                <div class="promo__card__btn">
+                  <button class="basket__btn">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div class="promo__card">
+              <div class="promo__card__img">
+                <img src="../assets/images/promo-card4.png" alt="" />
+                <button
+                  onclick="document.getElementById('card__heart-3').style.display='none';
+                  document.getElementById('hearted-3').style.display='inline';"
+                >
+                  <svg
+                    id="card__heart-3"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 24 24"
+                    fill="current-color"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.7046 4.25644C13.8299 3.13067 15.3564 2.49817 16.9482 2.49817C18.5399 2.49817 20.0664 3.13063 21.1916 4.25636C22.3174 5.38164 22.95 6.90829 22.95 8.49999C22.95 10.0917 22.3175 11.6183 21.1917 12.7435C21.1917 12.7436 21.1917 12.7435 21.1917 12.7435L12.3517 21.5835C12.1565 21.7788 11.8399 21.7788 11.6446 21.5835L2.80461 12.7435C0.460963 10.3999 0.460963 6.60009 2.80461 4.25644C5.14826 1.91279 8.94807 1.91279 11.2917 4.25644L11.9982 4.96289L12.7046 4.25644C12.7046 4.25641 12.7046 4.25647 12.7046 4.25644ZM16.9482 3.49817C15.6217 3.49817 14.3496 4.02528 13.4118 4.96346L12.3517 6.02355C12.258 6.11732 12.1308 6.16999 11.9982 6.16999C11.8656 6.16999 11.7384 6.11732 11.6446 6.02355L10.5846 4.96355C8.63149 3.01042 5.46484 3.01042 3.51172 4.96355C1.55859 6.91667 1.55859 10.0833 3.51172 12.0364L11.9982 20.5229L20.4846 12.0364C21.4228 11.0987 21.95 9.82648 21.95 8.49999C21.95 7.17351 21.4229 5.90138 20.4847 4.96363C19.5469 4.02544 18.2747 3.49817 16.9482 3.49817Z"
+                      fill="current-color"
+                    />
+                  </svg>
+                </button>
+                <button
+                  onclick="document.getElementById('hearted-3').style.display='none';
+                  document.getElementById('card__heart-3').style.display='inline';"
+                >
+                  <img
+                    id="hearted-3"
+                    src="../assets/images/hearted.svg"
+                    alt=""
+                  />
+                </button>
+                <span>-50%</span>
+              </div>
+              <div class="promo__card__content">
+                <div class="promo__card__top">
+                  <div class="promo__card__top__left">
+                    <h1>44,50 ₽</h1>
+                    <p>С картой</p>
+                  </div>
+                  <div class="promo__card__top__right">
+                    <h2>50,50 ₽</h2>
+                    <p>Обычная</p>
+                  </div>
+                </div>
+                <h5 class="promo__card__text">
+                  Г/Ц Блинчики с мясом вес, Россия
+                </h5>
+                <img src="assets/images/rating4.5.svg" alt="" />
+                <div class="promo__card__btn">
+                  <button class="basket__btn">В корзину</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container__1250 footer">
+        <ul class="footer__list">
+          <li class="footer__logo">
+            <a href="#">
+              <img src="../assets/images/footer-logo.svg" alt="" />
+            </a>
+          </li>
+          <li class="footer__items">
+            <a href="pages/about.html">О компании</a>
+          </li>
+          <li class="footer__items">
+            <a href="pages/contact.html">Контакты</a>
+          </li>
+          <li class="footer__items">
+            <a href="pages/vacancy.html">Вакансии</a>
+          </li>
+          <li class="footer__items"><a href="pages/vacancy.html">Статьи</a></li>
+          <li class="footer__items">
+            <a href="pages/articles.html"
+              >Политика обработки персональных данных</a
+            >
+          </li>
+        </ul>
+        <div class="footer__end">
+          <div class="footer__brands">
+            <img src="../assets/images/instagram.svg" alt="" />
+            <img src="../assets/images/vkontakte.svg" alt="" />
+            <img src="../assets/images/facebook.svg" alt="" />
+            <img src="../assets/images/ok.svg" alt="" />
+          </div>
+          <div class="phone">
+            <a href="pages/contact.html">
+              <img src="../assets/images/phone.svg" alt="" />
+            </a>
+            <p>8 800 777 33 33</p>
+          </div>
+        </div>
+      </div>
+      <div class="container__1250 footer__bottom">
+        <p>Дизайн</p>
+        <img src="../assets/images/logo-zasovskiy-small-black.svg" alt="" />
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+  </body>
 </html>
