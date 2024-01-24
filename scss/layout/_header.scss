@@ -58,25 +58,53 @@ header {
       }
     }
     &__toggle {
-      overflow: hidden;
       position: relative;
-      padding: 8px;
       display: flex;
       gap: 8px;
       align-items: center;
       background-color: var.$secondary-color;
       border-radius: 4px;
+      cursor: pointer;
       @media (max-width: 700px) {
         display: none;
       }
-      span {
+      button {
+        padding: 8px 0 8px 8px;
+        border-radius: 4px;
+        background-color: transparent;
+        position: relative;
+        span {
+          display: block;
+          position: absolute;
+          width: 25px;
+          height: 2px;
+          background-color: white;
+          border-radius: 4px;
+          transition: 0.6s;
+        }
+        .hamburger-top {
+          top: 0;
+        }
+        .hamburger-center {
+          top: 40%;
+          bottom: 25%;
+        }
+        .hamburger-bottom {
+          bottom: 1.2px;
+        }
+      }
+      a {
         width: 92px;
-        height: 24px;
+        height: 44px;
+        margin-left: 25px;
         color: var.$white-color;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-weight: 400;
         font-size: 16px;
         line-height: 150%;
+        border-radius: 4px;
         @media (max-width: 930px) {
           display: none;
         }
@@ -166,6 +194,43 @@ header {
   }
 }
 
+#katalog {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: -200px;
+  width: 100%;
+  height: 248px;
+  padding: 40px 116px;
+  gap: 20px;
+  border-radius: 4px;
+  background-color: var.$white-color;
+  transition: 0.5s;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+}
+
+.katalog__menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    a {
+      color: var.$text-color;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 150%;
+    }
+    a:hover {
+      color: var.$primary-color;
+    }
+  }
+}
+
+// BOTTOM NAV
+
 #header__bottom {
   @media (min-width: 700px) {
     display: none;
@@ -220,27 +285,7 @@ header {
   }
 }
 
-.katalog {
-  width: 823px;
-  top: 40px;
-  left: 0;
-  position: absolute;
-  padding: 30px;
-  display: flex;
-  gap: 20px;
-  border-radius: 4px;
-  background-color: var.$primary-color;
-  transition: 0.5s;
-  opacity: 0;
-  a {
-    color: var.$white-color;
-  }
-  a:hover {
-    color: var.$black-color;
-  }
-}
-
-.katalog__bottom {
+#katalog__bottom {
   width: 100%;
   height: 250px;
   padding: 20px;

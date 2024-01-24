@@ -81,28 +81,6 @@
     box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
     &__img {
       position: relative;
-      #card__heart,
-      #card__heart-1,
-      #card__heart-2,
-      #card__heart-3,
-      #card__heart-4,
-      #card__heart-5,
-      #card__heart-6,
-      #card__heart-7,
-      #card__heart-8,
-      #card__heart-9,
-      #card__heart-10,
-      #card__heart-11 {
-        position: absolute;
-        right: 8px;
-        top: 8px;
-        fill: black;
-        padding: 8px;
-        border-radius: 4px;
-        opacity: 0.5;
-        background: var(--Grayscale-Lightest, #f3f2f1);
-      }
-
       span {
         position: absolute;
         left: 13px;
@@ -179,18 +157,17 @@
   }
 }
 
-#hearted,
-#hearted-1,
-#hearted-2,
-#hearted-3,
-#hearted-4,
-#hearted-5,
-#hearted-6,
-#hearted-7,
-#hearted-8,
-#hearted-9,
-#hearted-10,
-#hearted-11 {
+.card__heart {
+  display: inline;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  opacity: 0.5;
+  background: var(--Grayscale-Lightest, #f3f2f1);
+}
+.hearted {
   display: none;
   position: absolute;
   right: 8px;
@@ -200,7 +177,6 @@
   opacity: 0.5;
   background: var(--Grayscale-Lightest, #f3f2f1);
 }
-
 // PROMO END
 
 // NEWS START

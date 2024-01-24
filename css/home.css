@@ -118,9 +118,7 @@ header .nav__row__items h6 {
   line-height: 150%;
 }
 header .nav__toggle {
-  overflow: hidden;
   position: relative;
-  padding: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,23 +128,60 @@ header .nav__toggle {
           align-items: center;
   background-color: #70c05b;
   border-radius: 4px;
+  cursor: pointer;
 }
 @media (max-width: 700px) {
   header .nav__toggle {
     display: none;
   }
 }
-header .nav__toggle span {
+header .nav__toggle button {
+  padding: 8px 0 8px 8px;
+  border-radius: 4px;
+  background-color: transparent;
+  position: relative;
+}
+header .nav__toggle button span {
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  border-radius: 4px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+header .nav__toggle button .hamburger-top {
+  top: 0;
+}
+header .nav__toggle button .hamburger-center {
+  top: 40%;
+  bottom: 25%;
+}
+header .nav__toggle button .hamburger-bottom {
+  bottom: 1.2px;
+}
+header .nav__toggle a {
   width: 92px;
-  height: 24px;
+  height: 44px;
+  margin-left: 25px;
   color: #fff;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+  border-radius: 4px;
 }
 @media (max-width: 930px) {
-  header .nav__toggle span {
+  header .nav__toggle a {
     display: none;
   }
 }
@@ -256,6 +291,48 @@ header .nav__items__basket span {
   background-color: #f63;
 }
 
+#katalog {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: -200px;
+  width: 100%;
+  height: 248px;
+  padding: 40px 116px;
+  gap: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+}
+
+.katalog__menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.katalog__menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+.katalog__menu ul a {
+  color: #414141;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+}
+.katalog__menu ul a:hover {
+  color: #f63;
+}
+
 #header__bottom {
   height: 56px;
   position: fixed;
@@ -340,30 +417,7 @@ header .nav__items__basket span {
   background-color: #f63;
 }
 
-.katalog {
-  width: 823px;
-  top: 40px;
-  left: 0;
-  position: absolute;
-  padding: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
-  border-radius: 4px;
-  background-color: #f63;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  opacity: 0;
-}
-.katalog a {
-  color: #fff;
-}
-.katalog a:hover {
-  color: #000;
-}
-
-.katalog__bottom {
+#katalog__bottom {
   width: 100%;
   height: 250px;
   padding: 20px;
@@ -379,11 +433,11 @@ header .nav__items__basket span {
   border-radius: 8px;
 }
 @media (max-width: 700px) {
-  .katalog__bottom {
+  #katalog__bottom {
     display: grid;
   }
 }
-.katalog__bottom a {
+#katalog__bottom a {
   font-size: 18px;
   color: #fff;
 }
@@ -637,27 +691,6 @@ footer {
 .promo__card__img {
   position: relative;
 }
-.promo__card__img #card__heart,
-.promo__card__img #card__heart-1,
-.promo__card__img #card__heart-2,
-.promo__card__img #card__heart-3,
-.promo__card__img #card__heart-4,
-.promo__card__img #card__heart-5,
-.promo__card__img #card__heart-6,
-.promo__card__img #card__heart-7,
-.promo__card__img #card__heart-8,
-.promo__card__img #card__heart-9,
-.promo__card__img #card__heart-10,
-.promo__card__img #card__heart-11 {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  fill: black;
-  padding: 8px;
-  border-radius: 4px;
-  opacity: 0.5;
-  background: var(--Grayscale-Lightest, #f3f2f1);
-}
 .promo__card__img span {
   position: absolute;
   left: 13px;
@@ -729,18 +762,18 @@ footer {
   border-color: #f63;
 }
 
-#hearted,
-#hearted-1,
-#hearted-2,
-#hearted-3,
-#hearted-4,
-#hearted-5,
-#hearted-6,
-#hearted-7,
-#hearted-8,
-#hearted-9,
-#hearted-10,
-#hearted-11 {
+.card__heart {
+  display: inline;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  opacity: 0.5;
+  background: var(--Grayscale-Lightest, #f3f2f1);
+}
+
+.hearted {
   display: none;
   position: absolute;
   right: 8px;

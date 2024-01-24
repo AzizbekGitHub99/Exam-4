@@ -20,25 +20,56 @@ for (let i = 0; i < btn2.length; i++) {
   });
 }
 
+// HEADER KATALOG
+
 let toggle = document.querySelector(".nav__toggle");
-let menu = document.querySelector(".katalog");
+let menu = document.querySelector("#katalog");
+let hamburgerTop = document.querySelector(".hamburger-top");
+let hamburgerCenter = document.querySelector(".hamburger-center");
+let hamburgerBottom = document.querySelector(".hamburger-bottom");
 let isOpen = false;
 
 toggle.addEventListener("click", () => {
   isOpen = !isOpen;
   if (isOpen) {
-    toggle.style.overflow = "visible";
-    menu.style.opacity = "1";
+    menu.style.top = "70px";
+    hamburgerTop.style = `
+    top: 6px;
+    transform: rotate(140deg);
+    width: 20px;
+    background-color: red;
+    `;
+    hamburgerBottom.style = `
+    top: 6px;
+    transform: rotate(-140deg);
+    width: 20px;
+    background-color: red;
+    `;
+    hamburgerCenter.style.opacity = "0";
   } else {
-    toggle.style.overflow = "hidden";
-    menu.style.opacity = "0";
+    menu.style.top = "-200px";
+    hamburgerTop.style = `
+    top: 0px;
+    transform: rotate(0);
+    width: 25px;
+    `;
+    hamburgerBottom.style = `
+    bottom: 1.2px;
+    transform: rotate(0);
+    width: 25px;
+    `;
+    hamburgerCenter.style = `
+    opacity: 1;
+    transition: 0.5s;
+    `;
   }
 });
 
 // HEADER BOTTOM KATALOG
 
-const katalogBottom = document.querySelector(".katalog__bottom");
-const toggleBottom = document.querySelector(".toggle__bottom");
+const katalogBottom = document.getElementById("katalog__bottom");
+const toggleBottom = document.getElementById("toggle__bottom");
+const main = document.getElementById("main");
 
 toggleBottom.addEventListener("click", () => {
   isOpen = !isOpen;
@@ -48,3 +79,9 @@ toggleBottom.addEventListener("click", () => {
     katalogBottom.style.bottom = "-200px";
   }
 });
+
+main.addEventListener("click", () => {
+  katalogBottom.style.bottom = "-200px";
+  menu.style.top = "-200px";
+});
+

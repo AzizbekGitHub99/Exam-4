@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="../css/vacanct.min.css" />
   </head>
   <body>
+    <div class="katalog">
+      <ul>
+        <li><a href="pages/categories.html">Молоко, сыр, яйцо</a></li>
+        <li><a href="pages/categories.html">Хлеб</a></li>
+        <li><a href="pages/categories.html">Фрукты и овощи</a></li>
+        <li><a href="pages/categories.html">Замороженные продукты</a></li>
+      </ul>
+      <ul>
+        <li><a href="pages/categories.html">Напитки</a></li>
+        <li><a href="pages/categories.html">Кондитерские изделия</a></li>
+        <li><a href="pages/categories.html">Чай, кофе</a></li>
+      </ul>
+      <ul>
+        <li><a href="pages/categories.html">Бакалея</a></li>
+        <li><a href="pages/categories.html">Здоровое питание</a></li>
+        <li><a href="pages/categories.html">Зоотовары</a></li>
+      </ul>
+      <ul>
+        <li><a href="pages/categories.html">Непродовольственные товары</a></li>
+        <li><a href="pages/categories.html">Детское питание</a></li>
+        <li><a href="pages/categories.html">Мясо, птица, колбаса</a></li>
+      </ul>
+    </div>
     <header>
       <nav class="nav container__1250">
         <div class="nav__logo">
@@ -18,21 +41,12 @@
           <img class="logo-mini" src="../assets/images/logo-mini.svg" alt="" />
         </div>
         <div class="nav__row">
-          <button class="nav__toggle">
-            <img src="../assets/images/menu.svg" alt="" /> <span>Каталог</span>
-            <div class="katalog">
-              <a href="products.html">Все продукты</a>
-              <a href="categories.html">Категории </a>
-              <a href="category.html">Категория </a>
-              <a href="product.html">Товар </a>
-              <a href="favorite.html">Избраное </a>
-              <a href="cart.html">Корзина </a>
-              <a href="about.html">О нас</a>
-              <a href="contact.html">Контакты </a>
-              <a href="vacancy.html">Вакансии </a>
-              <a href="articles.html">Статьи </a>
-            </div>
-          </button>
+          <div class="nav__toggle">
+            <button>
+              <img src="../assets/images/menu.svg" alt="" />
+            </button>
+            <a href="categories.html">Каталог</a>
+          </div>
           <form>
             <div class="nav__search">
               <input type="text" placeholder="Найти товар" />
@@ -72,7 +86,7 @@
       <nav class="container__1250 nav__bottom">
         <ul class="nav__bottom__row">
           <li>
-            <button>
+            <button id="toggle__bottom">
               <img src="../assets/images/menu-bottom.svg" alt="" />Каталог
             </button>
           </li>
@@ -98,6 +112,20 @@
         </ul>
       </nav>
     </header>
+    <div id="header__bottom__links">
+      <div id="katalog__bottom">
+        <a href="pages/products.html">Все продукты</a>
+        <a href="pages/categories.html">Категории </a>
+        <a href="pages/category.html">Категория </a>
+        <a href="pages/product.html">Товар </a>
+        <a href="pages/favorite.html">Избраное </a>
+        <a href="pages/cart.html">Корзина </a>
+        <a href="pages/about.html">О нас</a>
+        <a href="pages/contact.html">Контакты </a>
+        <a href="pages/vacancy.html">Вакансии </a>
+        <a href="pages/articles.html">Статьи </a>
+      </div>
+    </div>
     <main id="main">
       <section id="hero">
         <div class="container__1250">

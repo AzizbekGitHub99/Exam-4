@@ -13,6 +13,33 @@
     <link rel="stylesheet" href="css/home.min.css" />
   </head>
   <body>
+    <div id="katalog">
+      <div class="katalog__menu container__1250">
+        <ul>
+          <li><a href="pages/categories.html">Молоко, сыр, яйцо</a></li>
+          <li><a href="pages/categories.html">Хлеб</a></li>
+          <li><a href="pages/categories.html">Фрукты и овощи</a></li>
+          <li><a href="pages/categories.html">Замороженные продукты</a></li>
+        </ul>
+        <ul>
+          <li><a href="pages/categories.html">Напитки</a></li>
+          <li><a href="pages/categories.html">Кондитерские изделия</a></li>
+          <li><a href="pages/categories.html">Чай, кофе</a></li>
+        </ul>
+        <ul>
+          <li><a href="pages/categories.html">Бакалея</a></li>
+          <li><a href="pages/categories.html">Здоровое питание</a></li>
+          <li><a href="pages/categories.html">Зоотовары</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="pages/categories.html">Непродовольственные товары</a>
+          </li>
+          <li><a href="pages/categories.html">Детское питание</a></li>
+          <li><a href="pages/categories.html">Мясо, птица, колбаса</a></li>
+        </ul>
+      </div>
+    </div>
     <header>
       <nav class="nav container__1250">
         <div class="nav__logo">
@@ -24,21 +51,15 @@
           <img class="logo-mini" src="assets/images/logo-mini.svg" alt="" />
         </div>
         <div class="nav__row">
-          <button class="nav__toggle">
-            <img src="assets/images/menu.svg" alt="" /> <span>Каталог</span>
-            <div class="katalog">
-              <a href="pages/products.html">Все продукты</a>
-              <a href="pages/categories.html">Категории </a>
-              <a href="pages/category.html">Категория </a>
-              <a href="pages/product.html">Товар </a>
-              <a href="pages/favorite.html">Избраное </a>
-              <a href="pages/cart.html">Корзина </a>
-              <a href="pages/about.html">О нас</a>
-              <a href="pages/contact.html">Контакты </a>
-              <a href="pages/vacancy.html">Вакансии </a>
-              <a href="pages/articles.html">Статьи </a>
-            </div>
-          </button>
+          <div class="nav__toggle">
+            <button>
+              <span class="hamburger-top"></span>
+              <span class="hamburger-center"></span>
+              <span class="hamburger-bottom"></span>
+              <!-- <img src="assets/images/menu.svg" alt="" /> -->
+            </button>
+            <a href="pages/categories.html">Каталог</a>
+          </div>
           <form>
             <div class="nav__search">
               <input type="text" placeholder="Найти товар" />
@@ -78,7 +99,7 @@
       <nav class="container__1250 nav__bottom">
         <ul class="nav__bottom__row">
           <li>
-            <button class="toggle__bottom">
+            <button id="toggle__bottom">
               <img src="assets/images/menu-bottom.svg" alt="" />Каталог
             </button>
           </li>
@@ -103,7 +124,7 @@
       </nav>
     </header>
     <div id="header__bottom__links">
-      <div class="katalog__bottom">
+      <div id="katalog__bottom">
         <a href="pages/products.html">Все продукты</a>
         <a href="pages/categories.html">Категории </a>
         <a href="pages/category.html">Категория </a>
@@ -135,31 +156,12 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card1.png" alt="" />
-                <button
-                  onclick="document.getElementById('card__heart').style.display='none';
-                  document.getElementById('hearted').style.display='inline';"
-                >
-                  <svg
-                    id="card__heart"
-                    width="50"
-                    height="50"
-                    viewBox="0 0 24 24"
-                    fill="current-color"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12.7046 4.25644C13.8299 3.13067 15.3564 2.49817 16.9482 2.49817C18.5399 2.49817 20.0664 3.13063 21.1916 4.25636C22.3174 5.38164 22.95 6.90829 22.95 8.49999C22.95 10.0917 22.3175 11.6183 21.1917 12.7435C21.1917 12.7436 21.1917 12.7435 21.1917 12.7435L12.3517 21.5835C12.1565 21.7788 11.8399 21.7788 11.6446 21.5835L2.80461 12.7435C0.460963 10.3999 0.460963 6.60009 2.80461 4.25644C5.14826 1.91279 8.94807 1.91279 11.2917 4.25644L11.9982 4.96289L12.7046 4.25644C12.7046 4.25641 12.7046 4.25647 12.7046 4.25644ZM16.9482 3.49817C15.6217 3.49817 14.3496 4.02528 13.4118 4.96346L12.3517 6.02355C12.258 6.11732 12.1308 6.16999 11.9982 6.16999C11.8656 6.16999 11.7384 6.11732 11.6446 6.02355L10.5846 4.96355C8.63149 3.01042 5.46484 3.01042 3.51172 4.96355C1.55859 6.91667 1.55859 10.0833 3.51172 12.0364L11.9982 20.5229L20.4846 12.0364C21.4228 11.0987 21.95 9.82648 21.95 8.49999C21.95 7.17351 21.4229 5.90138 20.4847 4.96363C19.5469 4.02544 18.2747 3.49817 16.9482 3.49817Z"
-                      fill="current-color"
-                    />
-                  </svg>
-                </button>
-                <button
-                  onclick="document.getElementById('hearted').style.display='none';
-                  document.getElementById('card__heart').style.display='inline';"
-                >
-                  <img id="hearted" src="assets/images/hearted.svg" alt="" />
+                <button class="like-btn">
+                  <img
+                    class="card__heart"
+                    src="assets/images/like-btn.svg"
+                    alt=""
+                  />
                 </button>
                 <span>-50%</span>
               </div>
@@ -186,31 +188,12 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card2.png" alt="" />
-                <button
-                  onclick="document.getElementById('card__heart-1').style.display='none';
-                  document.getElementById('hearted-1').style.display='inline';"
-                >
-                  <svg
-                    id="card__heart-1"
-                    width="50"
-                    height="50"
-                    viewBox="0 0 24 24"
-                    fill="current-color"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12.7046 4.25644C13.8299 3.13067 15.3564 2.49817 16.9482 2.49817C18.5399 2.49817 20.0664 3.13063 21.1916 4.25636C22.3174 5.38164 22.95 6.90829 22.95 8.49999C22.95 10.0917 22.3175 11.6183 21.1917 12.7435C21.1917 12.7436 21.1917 12.7435 21.1917 12.7435L12.3517 21.5835C12.1565 21.7788 11.8399 21.7788 11.6446 21.5835L2.80461 12.7435C0.460963 10.3999 0.460963 6.60009 2.80461 4.25644C5.14826 1.91279 8.94807 1.91279 11.2917 4.25644L11.9982 4.96289L12.7046 4.25644C12.7046 4.25641 12.7046 4.25647 12.7046 4.25644ZM16.9482 3.49817C15.6217 3.49817 14.3496 4.02528 13.4118 4.96346L12.3517 6.02355C12.258 6.11732 12.1308 6.16999 11.9982 6.16999C11.8656 6.16999 11.7384 6.11732 11.6446 6.02355L10.5846 4.96355C8.63149 3.01042 5.46484 3.01042 3.51172 4.96355C1.55859 6.91667 1.55859 10.0833 3.51172 12.0364L11.9982 20.5229L20.4846 12.0364C21.4228 11.0987 21.95 9.82648 21.95 8.49999C21.95 7.17351 21.4229 5.90138 20.4847 4.96363C19.5469 4.02544 18.2747 3.49817 16.9482 3.49817Z"
-                      fill="current-color"
-                    />
-                  </svg>
-                </button>
-                <button
-                  onclick="document.getElementById('hearted-1').style.display='none';
-                  document.getElementById('card__heart-1').style.display='inline';"
-                >
-                  <img id="hearted-1" src="assets/images/hearted.svg" alt="" />
+                <button class="like-btn">
+                  <img
+                    class="card__heart"
+                    src="assets/images/like-btn.svg"
+                    alt=""
+                  />
                 </button>
                 <span>-50%</span>
               </div>
@@ -237,31 +220,12 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card3.png" alt="" />
-                <button
-                  onclick="document.getElementById('card__heart-2').style.display='none';
-                  document.getElementById('hearted-2').style.display='inline';"
-                >
-                  <svg
-                    id="card__heart-2"
-                    width="50"
-                    height="50"
-                    viewBox="0 0 24 24"
-                    fill="current-color"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12.7046 4.25644C13.8299 3.13067 15.3564 2.49817 16.9482 2.49817C18.5399 2.49817 20.0664 3.13063 21.1916 4.25636C22.3174 5.38164 22.95 6.90829 22.95 8.49999C22.95 10.0917 22.3175 11.6183 21.1917 12.7435C21.1917 12.7436 21.1917 12.7435 21.1917 12.7435L12.3517 21.5835C12.1565 21.7788 11.8399 21.7788 11.6446 21.5835L2.80461 12.7435C0.460963 10.3999 0.460963 6.60009 2.80461 4.25644C5.14826 1.91279 8.94807 1.91279 11.2917 4.25644L11.9982 4.96289L12.7046 4.25644C12.7046 4.25641 12.7046 4.25647 12.7046 4.25644ZM16.9482 3.49817C15.6217 3.49817 14.3496 4.02528 13.4118 4.96346L12.3517 6.02355C12.258 6.11732 12.1308 6.16999 11.9982 6.16999C11.8656 6.16999 11.7384 6.11732 11.6446 6.02355L10.5846 4.96355C8.63149 3.01042 5.46484 3.01042 3.51172 4.96355C1.55859 6.91667 1.55859 10.0833 3.51172 12.0364L11.9982 20.5229L20.4846 12.0364C21.4228 11.0987 21.95 9.82648 21.95 8.49999C21.95 7.17351 21.4229 5.90138 20.4847 4.96363C19.5469 4.02544 18.2747 3.49817 16.9482 3.49817Z"
-                      fill="current-color"
-                    />
-                  </svg>
-                </button>
-                <button
-                  onclick="document.getElementById('hearted-2').style.display='none';
-                  document.getElementById('card__heart-2').style.display='inline';"
-                >
-                  <img id="hearted-2" src="assets/images/hearted.svg" alt="" />
+                <button class="like-btn">
+                  <img
+                    class="card__heart"
+                    src="assets/images/like-btn.svg"
+                    alt=""
+                  />
                 </button>
                 <span>-50%</span>
               </div>
@@ -288,31 +252,12 @@
             <div class="promo__card">
               <div class="promo__card__img">
                 <img src="assets/images/promo-card4.png" alt="" />
-                <button
-                  onclick="document.getElementById('card__heart-3').style.display='none';
-                  document.getElementById('hearted-3').style.display='inline';"
-                >
-                  <svg
-                    id="card__heart-3"
-                    width="50"
-                    height="50"
-                    viewBox="0 0 24 24"
-                    fill="current-color"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12.7046 4.25644C13.8299 3.13067 15.3564 2.49817 16.9482 2.49817C18.5399 2.49817 20.0664 3.13063 21.1916 4.25636C22.3174 5.38164 22.95 6.90829 22.95 8.49999C22.95 10.0917 22.3175 11.6183 21.1917 12.7435C21.1917 12.7436 21.1917 12.7435 21.1917 12.7435L12.3517 21.5835C12.1565 21.7788 11.8399 21.7788 11.6446 21.5835L2.80461 12.7435C0.460963 10.3999 0.460963 6.60009 2.80461 4.25644C5.14826 1.91279 8.94807 1.91279 11.2917 4.25644L11.9982 4.96289L12.7046 4.25644C12.7046 4.25641 12.7046 4.25647 12.7046 4.25644ZM16.9482 3.49817C15.6217 3.49817 14.3496 4.02528 13.4118 4.96346L12.3517 6.02355C12.258 6.11732 12.1308 6.16999 11.9982 6.16999C11.8656 6.16999 11.7384 6.11732 11.6446 6.02355L10.5846 4.96355C8.63149 3.01042 5.46484 3.01042 3.51172 4.96355C1.55859 6.91667 1.55859 10.0833 3.51172 12.0364L11.9982 20.5229L20.4846 12.0364C21.4228 11.0987 21.95 9.82648 21.95 8.49999C21.95 7.17351 21.4229 5.90138 20.4847 4.96363C19.5469 4.02544 18.2747 3.49817 16.9482 3.49817Z"
-                      fill="current-color"
-                    />
-                  </svg>
-                </button>
-                <button
-                  onclick="document.getElementById('hearted-3').style.display='none';
-                  document.getElementById('card__heart-3').style.display='inline';"
-                >
-                  <img id="hearted-3" src="assets/images/hearted.svg" alt="" />
+                <button class="like-btn">
+                  <img
+                    class="card__heart"
+                    src="assets/images/like-btn.svg"
+                    alt=""
+                  />
                 </button>
                 <span>-50%</span>
               </div>
@@ -873,5 +818,6 @@
       </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
   </body>
 </html>
