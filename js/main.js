@@ -1,10 +1,14 @@
 let count = 0;
 const btn = document.querySelectorAll(".basket__btn");
 const span = document.querySelector(".plus");
+if (count == 0) {
+  span.style.display = "none";
+}
 
 for (let i = 0; i < btn.length; i++) {
   btn[i].addEventListener("click", () => {
     count++;
+    span.style.display = "flex";
     span.innerHTML = count;
   });
 }
@@ -37,13 +41,13 @@ toggle.addEventListener("click", () => {
     top: 6px;
     transform: rotate(140deg);
     width: 20px;
-    background-color: red;
+    background-color: #f63;
     `;
     hamburgerBottom.style = `
     top: 6px;
     transform: rotate(-140deg);
     width: 20px;
-    background-color: red;
+    background-color: #f64;
     `;
     hamburgerCenter.style.opacity = "0";
   } else {
@@ -83,5 +87,28 @@ toggleBottom.addEventListener("click", () => {
 main.addEventListener("click", () => {
   katalogBottom.style.bottom = "-200px";
   menu.style.top = "-200px";
+  hamburgerTop.style = `
+    top: 0px;
+    transform: rotate(0);
+    width: 25px;
+    `;
+  hamburgerBottom.style = `
+    bottom: 1.2px;
+    transform: rotate(0);
+    width: 25px;
+    `;
+  hamburgerCenter.style = `
+    opacity: 1;
+    transition: 0.5s;
+    `;
 });
 
+// header catalog mapping
+
+const catalotUl = document.createElement("ul");
+const catalotLi = document.createElement("li");
+const catalotA = document.createElement("a");
+
+for (let i = 1; i < 4; i++) {
+  
+}

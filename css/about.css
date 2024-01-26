@@ -25,6 +25,7 @@ li {
 button {
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .container__1250 {
