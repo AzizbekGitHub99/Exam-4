@@ -1,28 +1,28 @@
-let count = 0;
-const btn = document.querySelectorAll(".basket__btn");
-const span = document.querySelector(".plus");
-if (count == 0) {
-  span.style.display = "none";
-}
+// let count = 0;
+// const btn = document.querySelectorAll(".basket__btn");
+// const span = document.querySelector(".plus");
+// if (count == 0) {
+//   span.style.display = "none";
+// }
 
-for (let i = 0; i < btn.length; i++) {
-  btn[i].addEventListener("click", () => {
-    count++;
-    span.style.display = "flex";
-    span.innerHTML = count;
-  });
-}
+// for (let i = 0; i < btn.length; i++) {
+//   btn[i].addEventListener("click", () => {
+//     count++;
+//     span.style.display = "flex";
+//     span.innerHTML = count;
+//   });
+// }
 
-let count2 = 0;
-const btn2 = document.querySelectorAll(".basket__btn");
-const span2 = document.querySelector(".plus2");
+// let count2 = 0;
+// const btn2 = document.querySelectorAll(".basket__btn");
+// const span2 = document.querySelector(".plus2");
 
-for (let i = 0; i < btn2.length; i++) {
-  btn2[i].addEventListener("click", () => {
-    count2++;
-    span2.innerHTML = count2;
-  });
-}
+// for (let i = 0; i < btn2.length; i++) {
+//   btn2[i].addEventListener("click", () => {
+//     count2++;
+//     span2.innerHTML = count2;
+//   });
+// }
 
 // HEADER KATALOG
 
@@ -41,17 +41,17 @@ toggle.addEventListener("click", () => {
     top: 6px;
     transform: rotate(140deg);
     width: 20px;
-    background-color: #f63;
+    background-color: white;
     `;
     hamburgerBottom.style = `
     top: 6px;
     transform: rotate(-140deg);
     width: 20px;
-    background-color: #f64;
+    background-color: white;
     `;
     hamburgerCenter.style.opacity = "0";
   } else {
-    menu.style.top = "-200px";
+    menu.style.top = "-210px";
     hamburgerTop.style = `
     top: 0px;
     transform: rotate(0);
@@ -80,7 +80,7 @@ toggleBottom.addEventListener("click", () => {
   if (isOpen) {
     katalogBottom.style.bottom = "0";
   } else {
-    katalogBottom.style.bottom = "-200px";
+    katalogBottom.style.bottom = "-210px";
   }
 });
 
@@ -102,13 +102,3 @@ main.addEventListener("click", () => {
     transition: 0.5s;
     `;
 });
-
-// header catalog mapping
-
-const catalotUl = document.createElement("ul");
-const catalotLi = document.createElement("li");
-const catalotA = document.createElement("a");
-
-for (let i = 1; i < 4; i++) {
-  
-}

@@ -1,0 +1,69 @@
+@use "../global";
+@use "../utils/variables" as var;
+
+body {
+  background-color: var.$bgc-main;
+}
+
+.hero__products {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  &__title {
+    color: var.$text-color;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 50px;
+  }
+  .line__cramp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    a {
+      color: var.$text-color;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    a:nth-child(2) {
+      color: #c0c0c0;
+    }
+  }
+  .promo__card {
+    margin-bottom: 30px;
+  }
+}
+
+.pagination__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 64px;
+  gap: 10px;
+  button {
+    color: var.$black-color;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border-radius: 50px;
+    border: 1px solid var.$primary-color;
+  }
+  .pagination__page {
+    background-color: transparent;
+  }
+  .pagination__prev,
+  .pagination__next {
+    background-color: transparent;
+    color: var.$black-color;
+  }
+  .activePage {
+    background-color: var.$primary-color;
+    color: var.$white-color;
+  }
+  .disabled__btn {
+    background-color: #eaeaea;
+    color: #c0c0c0;
+    border: none;
+  }
+}

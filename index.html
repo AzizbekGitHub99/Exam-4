@@ -63,14 +63,22 @@
               <span class="hamburger-top"></span>
               <span class="hamburger-center"></span>
               <span class="hamburger-bottom"></span>
-              <!-- <img src="assets/images/menu.svg" alt="" /> -->
             </button>
             <a href="pages/categories.html">Каталог</a>
           </div>
           <form>
             <div class="nav__search">
-              <input type="text" placeholder="Найти товар" />
-              <img src="assets/images/search.svg" alt="" />
+              <input
+                class="search__input"
+                type="text"
+                placeholder="Найти товар"
+              />
+              <img
+                class="search__icon"
+                src="../assets/images/search.svg"
+                alt=""
+              />
+              <div class="searching__content"></div>
             </div>
           </form>
           <ul class="nav__row__items">
@@ -364,6 +372,7 @@
     </footer>
     <script src="js/main.js"></script>
     <script src="js/products-data.js"></script>
+    <script src="js/products.js"></script>
     <script src="js/home.js"></script>
   </body>
 </html>

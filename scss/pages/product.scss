@@ -92,34 +92,16 @@ body {
         @media (max-width: 480px) {
           gap: 0;
         }
-        .product__mini2 {
-          display: none;
-          @media (max-width: 1000px) {
-            display: inline;
-          }
-        }
         .product__mini1 {
           display: inline;
-          @media (max-width: 1000px) {
-            display: none;
-          }
+          width: 64px;
+          height: 64px;
         }
       }
       .product__image {
-        .product__big2 {
-          display: none;
-          @media (max-width: 1000px) {
-            display: inline;
-          }
-          @media (max-width: 480px) {
-            width: 248px;
-          }
-        }
         .product__big1 {
-          display: inline;
-          @media (max-width: 1000px) {
-            display: none;
-          }
+          width: 400px;
+          height: 360px;
         }
       }
     }

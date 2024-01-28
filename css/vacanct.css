@@ -211,14 +211,14 @@ header .nav__search {
   }
 }
 header .nav__search input {
-  padding: 8px 0;
+  padding: 6.7px 0;
   width: 100%;
   outline: none;
   border: 2px solid #70c05b;
   border-radius: 4px;
   padding-left: 8px;
 }
-header .nav__search img {
+header .nav__search .search__icon {
   position: absolute;
   right: 8px;
   top: 5px;
@@ -296,7 +296,7 @@ header .nav__items__basket span {
   position: fixed;
   right: 0;
   left: 0;
-  top: -200px;
+  top: -210px;
   width: 100%;
   height: 248px;
   padding: 40px 116px;
@@ -441,6 +441,77 @@ header .nav__items__basket span {
 #katalog__bottom a {
   font-size: 18px;
   color: #fff;
+}
+
+.searching__content {
+  position: absolute;
+  width: 100%;
+  max-height: 500px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: auto;
+  z-index: 1;
+  background-color: #fff;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+.searching__content .search__product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.searching__content .search__product .search__product__img__div {
+  overflow: hidden;
+}
+.searching__content .search__product .search__product__img {
+  width: 100px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.searching__content .search__product p {
+  font-size: 25px;
+  position: absolute;
+  right: 15px;
+}
+.searching__content .search__product__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.searching__content .search__product__content h4 {
+  font-size: 22px;
+  color: #70c05b;
+}
+.searching__content .search__product__content .rating__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+}
+.searching__content .search__product__content .rating__row i {
+  font-size: 12px;
+  color: #f63;
+}
+.searching__content .search__product:hover {
+  background-color: #ddd;
+}
+.searching__content .search__product:hover .search__product__img {
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
 }
 
 footer {

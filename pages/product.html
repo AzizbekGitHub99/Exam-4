@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
       rel="stylesheet"
     />
@@ -11,28 +18,32 @@
     <title>PRODUCT</title>
   </head>
   <body>
-    <div class="katalog">
-      <ul>
-        <li><a href="pages/categories.html">Молоко, сыр, яйцо</a></li>
-        <li><a href="pages/categories.html">Хлеб</a></li>
-        <li><a href="pages/categories.html">Фрукты и овощи</a></li>
-        <li><a href="pages/categories.html">Замороженные продукты</a></li>
-      </ul>
-      <ul>
-        <li><a href="pages/categories.html">Напитки</a></li>
-        <li><a href="pages/categories.html">Кондитерские изделия</a></li>
-        <li><a href="pages/categories.html">Чай, кофе</a></li>
-      </ul>
-      <ul>
-        <li><a href="pages/categories.html">Бакалея</a></li>
-        <li><a href="pages/categories.html">Здоровое питание</a></li>
-        <li><a href="pages/categories.html">Зоотовары</a></li>
-      </ul>
-      <ul>
-        <li><a href="pages/categories.html">Непродовольственные товары</a></li>
-        <li><a href="pages/categories.html">Детское питание</a></li>
-        <li><a href="pages/categories.html">Мясо, птица, колбаса</a></li>
-      </ul>
+    <div id="katalog">
+      <div class="katalog__menu container__1250">
+        <ul>
+          <li><a href="pages/categories.html">Молоко, сыр, яйцо</a></li>
+          <li><a href="pages/categories.html">Хлеб</a></li>
+          <li><a href="pages/categories.html">Фрукты и овощи</a></li>
+          <li><a href="pages/categories.html">Замороженные продукты</a></li>
+        </ul>
+        <ul>
+          <li><a href="pages/categories.html">Напитки</a></li>
+          <li><a href="pages/categories.html">Кондитерские изделия</a></li>
+          <li><a href="pages/categories.html">Чай, кофе</a></li>
+        </ul>
+        <ul>
+          <li><a href="pages/categories.html">Бакалея</a></li>
+          <li><a href="pages/categories.html">Здоровое питание</a></li>
+          <li><a href="pages/categories.html">Зоотовары</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="pages/categories.html">Непродовольственные товары</a>
+          </li>
+          <li><a href="pages/categories.html">Детское питание</a></li>
+          <li><a href="pages/categories.html">Мясо, птица, колбаса</a></li>
+        </ul>
+      </div>
     </div>
     <header>
       <nav class="nav container__1250">
@@ -47,14 +58,25 @@
         <div class="nav__row">
           <div class="nav__toggle">
             <button>
-              <img src="../assets/images/menu.svg" alt="" />
+              <span class="hamburger-top"></span>
+              <span class="hamburger-center"></span>
+              <span class="hamburger-bottom"></span>
             </button>
-            <a href="categories.html">Каталог</a>
+            <a href="pages/categories.html">Каталог</a>
           </div>
           <form>
             <div class="nav__search">
-              <input type="text" placeholder="Найти товар" />
-              <img src="../assets/images/search.svg" alt="" />
+              <input
+                class="search__input"
+                type="text"
+                placeholder="Найти товар"
+              />
+              <img
+                class="search__icon"
+                src="../assets/images/search.svg"
+                alt=""
+              />
+              <div class="searching__content"></div>
             </div>
           </form>
           <ul class="nav__row__items">
@@ -132,153 +154,7 @@
     </div>
     <main id="main">
       <section id="hero">
-        <div class="container__1250 hero">
-          <div class="hero__links">
-            <a href="../index.html"
-              >Главная <img src="../assets/images/chevron-right.svg" alt=""
-            /></a>
-            <a href="#"
-              >Каталог <img src="../assets/images/chevron-right.svg" alt=""
-            /></a>
-            <a href="#"
-              >Молоко, сыр, яйцо
-              <img src="../assets/images/chevron-right.svg" alt=""
-            /></a>
-            <p>
-              Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180
-              г
-            </p>
-          </div>
-          <p class="product__name">
-            Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г
-          </p>
-          <div class="product__rating">
-            <p class="product__code">арт. 371431</p>
-            <span class="rating__product__box">
-              <img src="../assets/images/rating-product.png" alt="" />
-              <p class="product__otziv">3 отзыва</p>
-            </span>
-            <button class="hero__share__btn">
-              <img src="../assets/images/share-icon.svg" alt="" /> Поделиться
-            </button>
-            <button class="hero__like__btn">
-              <img src="../assets/images/like-icon.svg" alt="" />В избраное
-            </button>
-          </div>
-          <div class="hero__product">
-            <div class="hero__product__left">
-              <div class="product__images">
-                <img
-                  class="product__mini1"
-                  src="../assets/images/product-mini.png"
-                  alt=""
-                />
-                <img
-                  class="product__mini1"
-                  src="../assets/images/product-mini.png"
-                  alt=""
-                />
-                <img
-                  class="product__mini1"
-                  src="../assets/images/product-mini.png"
-                  alt=""
-                />
-                <img
-                  class="product__mini1"
-                  src="../assets/images/product-mini.png"
-                  alt=""
-                />
-                <img
-                  class="product__mini1"
-                  src="../assets/images/product-mini.png"
-                  alt=""
-                />
-                <img
-                  class="product__mini2"
-                  src="../assets/images/product-mini2.png"
-                  alt=""
-                />
-                <img
-                  class="product__mini2"
-                  src="../assets/images/product-mini2.png"
-                  alt=""
-                />
-                <img
-                  class="product__mini2"
-                  src="../assets/images/product-mini2.png"
-                  alt=""
-                />
-                <img
-                  class="product__mini2"
-                  src="../assets/images/product-mini2.png"
-                  alt=""
-                />
-                <img
-                  class="product__mini2"
-                  src="../assets/images/product-mini2.png"
-                  alt=""
-                />
-              </div>
-              <div class="product__image">
-                <img
-                  class="product__big1"
-                  src="../assets/images/product-big.png"
-                  alt=""
-                />
-                <img
-                  class="product__big2"
-                  src="../assets/images/product-big2.png"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="hero__product__right">
-              <div class="hero__product__right__top">
-                <span>
-                  <h6>192,69 ₽</h6>
-                  <p>Обычная цена</p>
-                </span>
-                <span>
-                  <h4>108,99 ₽</h4>
-                  <p>
-                    С картой Северяночки
-                    <img src="../assets/images/info-icon.svg" alt="" />
-                  </p>
-                </span>
-              </div>
-              <div class="product__basket__btn">
-                <button>
-                  <img src="../assets/images/product-basket.svg" alt="" />
-                  <span>В корзину</span>
-                </button>
-              </div>
-              <div class="bonus">
-                <button>
-                  <img src="../assets/images/atom.svg" alt="" />
-                  Вы получаете 10 бонусов
-                </button>
-              </div>
-              <p class="notification">
-                <img src="../assets/images/notification.svg" alt="" />
-                Уведомить о снижении цены
-              </p>
-              <div class="hero__product__right__bottom">
-                <span>
-                  <p>Бренд</p>
-                  <h6>ПРОСТОКВАШИНО</h6>
-                </span>
-                <span>
-                  <p>Страна производителя</p>
-                  <h6>Россия</h6>
-                </span>
-                <span>
-                  <p>Упаковка</p>
-                  <h6>180 г</h6>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="container__1250 hero"></div>
       </section>
       <section id="similar">
         <div class="container__1250 similar">
@@ -822,5 +698,8 @@
       </div>
     </footer>
     <script src="../js/main.js"></script>
+    <script src="../js/products-data.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/product.js"></script>
   </body>
 </html>

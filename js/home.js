@@ -18,7 +18,7 @@ function getPromoCard({
   promoCardFrame.className = "promo__card__img";
   const promoCardImg = document.createElement("img");
   promoCardImg.className = "product__img";
-  promoCardImg.src = images[3];
+  promoCardImg.src = images[0];
   const promoCardLikeBtn = document.createElement("button");
   promoCardLikeBtn.className = "like-btn";
   const promoCardLikeBtnImg = document.createElement("img");
