@@ -1,14 +1,10 @@
 // let count = 0;
 // const btn = document.querySelectorAll(".basket__btn");
 // const span = document.querySelector(".plus");
-// if (count == 0) {
-//   span.style.display = "none";
-// }
 
 // for (let i = 0; i < btn.length; i++) {
 //   btn[i].addEventListener("click", () => {
 //     count++;
-//     span.style.display = "flex";
 //     span.innerHTML = count;
 //   });
 // }
@@ -84,21 +80,16 @@ toggleBottom.addEventListener("click", () => {
   }
 });
 
-main.addEventListener("click", () => {
-  katalogBottom.style.bottom = "-200px";
-  menu.style.top = "-200px";
-  hamburgerTop.style = `
-    top: 0px;
-    transform: rotate(0);
-    width: 25px;
-    `;
-  hamburgerBottom.style = `
-    bottom: 1.2px;
-    transform: rotate(0);
-    width: 25px;
-    `;
-  hamburgerCenter.style = `
-    opacity: 1;
-    transition: 0.5s;
-    `;
-});
+// ADD TO CART
+
+let cartQuantity = document.querySelector(".cart__quantity");
+
+let cartJson = localStorage.getItem("cart");
+
+let cartProduct = JSON.parse(cartJson) || [];
+
+function getCartQuantity() {
+  cartQuantity.textContent = cartProduct.length;
+}
+
+getCartQuantity();

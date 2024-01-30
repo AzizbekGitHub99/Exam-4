@@ -2,11 +2,10 @@ const allProductsRow = document.querySelector(".promo__row");
 const searchInput = document.querySelectorAll(".search__input");
 const searchingContent = document.querySelectorAll(".searching__content");
 const pagination = document.querySelector(".pagination__row");
-const productLInk = document.querySelector(".product__link");
 
 let search = "";
 
-let activePage = 1;
+let activePage = +localStorage.getItem("page") || 1;
 
 function getPromoCard({
   id,
@@ -35,16 +34,17 @@ function getPromoCard({
       return `../assets/images/rating1.svg`;
     }
   }
+  let productInCart = cartProduct.find((pr) => pr.id === id);
   return `
 <div class="promo__card">
   <div class="promo__card__img">
-    <button class="product__link">
       <img class="product__img" src=${images[0]} />
-    </button>
     <button class="like-btn">
       <img class="card__heart" src="../../assets/images/like-btn.svg" />
     </button>
-    <span>${discount}</span>
+    <span class="product__discount ${
+      discount === 0 ? "no__discount" : ""
+    }}">${discount}</span>
   </div>
   <div class="promo__card__content">
     <div class="promo__card__top">
@@ -62,108 +62,20 @@ function getPromoCard({
     <img src=${getRating()}
     alt=${name}
      />
-    <div class="promo__card__btn">
-      <button class="basket__btn">В корзину</button>  
-    </div>
+     ${
+       productInCart
+         ? `<div class = "promo__card__btn plus__minus">
+              <button class="minus" onclick="decreaseQuantity(${id})">-</button>
+              <span class="product__quantity">${productInCart.quantity}</span>
+              <button class="pluss" onclick="increaseQuantity(${id})">+</button>
+            </div>`
+         : `<div class="promo__card__btn">
+              <button onclick="addToCart(${id})" class="basket__btn">В корзину</button>
+            </div>`
+     }
   </div>
 </div>
   `;
-  // const promoCard = document.createElement("div");
-  // promoCard.className = "promo__card";
-  // const productLink = document.createElement("button");
-  // productLink.className = "product__link";
-  // const promoCardFrame = document.createElement("div");
-  // promoCardFrame.className = "promo__card__img";
-  // const promoCardImg = document.createElement("img");
-  // promoCardImg.className = "product__img";
-  // promoCardImg.src = images[0];
-  // const promoCardLikeBtn = document.createElement("button");
-  // promoCardLikeBtn.className = "like-btn";
-  // const promoCardLikeBtnImg = document.createElement("img");
-  // promoCardLikeBtnImg.className = "card__heart";
-  // promoCardLikeBtnImg.src = "../../assets/images/like-btn.svg";
-  // const promoCardDiscount = document.createElement("span");
-  // const promoCardContent = document.createElement("div");
-  // promoCardContent.className = "promo__card__content";
-  // const promoCardContentTop = document.createElement("div");
-  // promoCardContentTop.className = "promo__card__top";
-  // const promoCardContentTopLeft = document.createElement("div");
-  // promoCardContentTopLeft.className = "promo__card__top__left";
-  // const promoCardContentTopLeftH1 = document.createElement("h1");
-  // const promoCardContentTopLefP1 = document.createElement("p");
-  // const promoCardContentTopRight = document.createElement("div");
-  // promoCardContentTopRight.className = "promo__card__top__right";
-  // const promoCardContentTopLeftH2 = document.createElement("h2");
-  // const promoCardContentTopLefP2 = document.createElement("p");
-  // const promoCardContentText = document.createElement("h5");
-  // promoCardContentText.className = "promo__card__text";
-  // const promoCardDescription = document.createElement("p");
-  // promoCardDescription.className = "card__description";
-  // const promoCardRating = document.createElement("img");
-  // promoCardRating.src = "../../assets/images/rating4.svg";
-  // const promoCardBtnDiv = document.createElement("div");
-  // promoCardBtnDiv.className = "promo__card__btn";
-  // const promoCardBtn = document.createElement("button");
-  // promoCardBtn.className = "basket__btn";
-
-  // promoCardDiscount.textContent = discount;
-  // promoCardContentTopLeftH1.textContent = price;
-  // promoCardContentTopLefP1.textContent = "С картой";
-  // promoCardContentTopLeftH2.textContent = price;
-  // promoCardContentTopLefP2.textContent = "Обычная";
-  // promoCardContentText.textContent = name;
-  // promoCardDescription.textContent = description;
-  // promoCardBtn.textContent = "В корзину";
-  //  if (rating == 5) {
-  //   promoCardRating.src = "../../assets/images/rating5.svg";
-  // } else if (rating == 4) {
-  //   promoCardRating.src = "../../assets/images/rating4.svg";
-  // } else if (rating == 4.5) {
-  //   promoCardRating.src = "../../assets/images/rating4.5.svg";
-  // } else if (rating == 3) {
-  //   promoCardRating.src = "../../assets/images/rating3.svg";
-  // } else if (rating == 3.5) {
-  //   promoCardRating.src = "../../assets/images/rating2.5.svg";
-  // } else if (rating == 2) {
-  //   promoCardRating.src = "../../assets/images/rating2.svg";
-  // } else if (rating == 1) {
-  //   promoCardRating.src = "../../assets/images/rating1.svg";
-  // }
-
-  // if (discount == 0) {
-  //   promoCardDiscount.style.display = "none";
-  // }
-
-  // promoCardBtnDiv.appendChild(promoCardBtn);
-
-  // productLink.append(promoCardImg);
-
-  // promoCardFrame.append(productLink, promoCardLikeBtn, promoCardDiscount);
-  // promoCardLikeBtn.append(promoCardLikeBtnImg);
-
-  // promoCardContentTopRight.append(
-  //   promoCardContentTopLeftH2,
-  //   promoCardContentTopLefP2
-  // );
-
-  // promoCardContentTopLeft.append(
-  //   promoCardContentTopLeftH1,
-  //   promoCardContentTopLefP1
-  // );
-
-  // promoCardContentTop.append(promoCardContentTopLeft, promoCardContentTopRight);
-
-  // promoCardContent.append(
-  //   promoCardContentTop,
-  //   promoCardContentText,
-  //   promoCardDescription,
-  //   promoCardRating,
-  //   promoCardBtnDiv
-  // );
-
-  // promoCard.append(promoCardFrame, promoCardContent);
-
-  // return promoCard;
 }
 
 function getSearchProduct({
@@ -291,14 +203,14 @@ function getPagination() {
 
   allProductsRow.innerHTML = " ";
 
-  let startProduct = (activePage - 1) * LIMIT;
-  let endProduct = activePage * LIMIT;
+  let startProduct = (activePage - 1) * 8;
+  let endProduct = activePage * 8;
 
   products.slice(startProduct, endProduct).map((el) => {
     allProductsRow.innerHTML += getPromoCard(el);
   });
 
-  let pages = Math.ceil(results2.length / LIMIT);
+  let pages = Math.ceil(results2.length / 8);
 
   pagination.innerHTML = `
     <button onclick="getPage('-')" class="pagination__prev">
@@ -337,5 +249,55 @@ function getPage(page) {
   } else {
     activePage = page;
   }
+  localStorage.setItem("page", activePage);
   getPagination();
+}
+
+function addToCart(id) {
+  let productFound = products.find((pr) => pr.id === id);
+  let productInCart = cartProduct.find((pr) => pr.id == id);
+
+  if (productInCart) {
+    cartProduct = cartProduct.map((pr) => {
+      if (pr.id === id) {
+        pr.quantity++;
+      }
+      return pr;
+    });
+  } else {
+    productFound.quantity = 1;
+    cartProduct.push(productFound);
+  }
+  getCartQuantity();
+  getPagination();
+
+  localStorage.setItem("cart", JSON.stringify(cartProduct));
+}
+
+function increaseQuantity(id) {
+  cartProduct = cartProduct.map((pr) => {
+    if (pr.id === id) {
+      pr.quantity++;
+    }
+    return pr;
+  });
+  getPagination();
+  localStorage.setItem("cart", JSON.stringify(cartProduct));
+}
+
+function decreaseQuantity(id) {
+  let productInCart = cartProduct.find((pr) => pr.id === id);
+  if (productInCart.quantity === 1) {
+    cartProduct = cartProduct.filter((pr) => pr.id !== id);
+  } else {
+    cartProduct = cartProduct.map((pr) => {
+      if (pr.id === id) {
+        pr.quantity--;
+      }
+      return pr;
+    });
+  }
+  getPagination();
+  getCartQuantity();
+  localStorage.setItem("cart", JSON.stringify(cartProduct));
 }

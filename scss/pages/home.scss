@@ -75,6 +75,7 @@
     }
   }
   &__card {
+    position: relative;
     max-width: 272px;
     background-color: var.$white-color;
     border-radius: 4px;
@@ -93,7 +94,7 @@
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
       }
-      span {
+      .product__discount {
         position: absolute;
         left: 10px;
         bottom: 15px;
@@ -174,6 +175,23 @@
       overflow: hidden;
     }
     &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 8px;
+      margin-top: 8px;
+      .minus,
+      .pluss {
+        background-color: var.$secondary-color;
+        width: 85px;
+        padding: 4px 0;
+        color: var.$white-color;
+        font-size: 30px;
+        border-radius: 4px;
+      }
+      .product__quantity {
+        font-size: 20px;
+      }
       .basket__btn {
         margin-top: 8px;
         width: 100%;
@@ -193,6 +211,10 @@
         border-color: var.$primary-color;
       }
     }
+    .plus__minus {
+      margin-top: 16px;
+      background-color: #ddd;
+    }
   }
   &__card:hover .promo__card__img {
     .product__img {
@@ -200,7 +222,30 @@
     }
   }
 }
+
 // PROMO END
+
+.animation__img {
+  display: none;
+  width: 100px;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  animation: animationImg 1s ease-in-out;
+  z-index: 100;
+}
+
+.animation__img__work {
+  display: inline-block;
+}
+
+@keyframes animationImg {
+  to {
+    top: -415px;
+    left: 930px;
+    width: 30px;
+  }
+}
 
 // NEWS START
 
