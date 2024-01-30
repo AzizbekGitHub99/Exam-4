@@ -82,14 +82,4 @@ toggleBottom.addEventListener("click", () => {
 
 // ADD TO CART
 
-let cartQuantity = document.querySelector(".cart__quantity");
 
-let cartJson = localStorage.getItem("cart");
-
-let cartProduct = JSON.parse(cartJson) || [];
-
-function getCartQuantity() {
-  cartQuantity.textContent = cartProduct.length;
-}
-
-getCartQuantity();

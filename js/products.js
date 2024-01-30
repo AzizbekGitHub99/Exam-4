@@ -203,14 +203,14 @@ function getPagination() {
 
   allProductsRow.innerHTML = " ";
 
-  let startProduct = (activePage - 1) * 8;
-  let endProduct = activePage * 8;
+  let startProduct = (activePage - 1) * 4;
+  let endProduct = activePage * 4;
 
   products.slice(startProduct, endProduct).map((el) => {
     allProductsRow.innerHTML += getPromoCard(el);
   });
 
-  let pages = Math.ceil(results2.length / 8);
+  let pages = Math.ceil(results2.length / 4);
 
   pagination.innerHTML = `
     <button onclick="getPage('-')" class="pagination__prev">

@@ -29,7 +29,7 @@ function getPromoCard({
       return `../assets/images/rating1.svg`;
     }
   }
-  let productInCart = cartProduct.find((pr) => pr.id === id);
+
   return `
 <div class="promo__card">
   <div class="promo__card__img">
@@ -57,17 +57,9 @@ function getPromoCard({
     <img src=${getRating()}
     alt=${name}
      />
-     ${
-       productInCart
-         ? `<div class = "promo__card__btn plus__minus">
-              <button class="minus" onclick="decreaseQuantity(${id})">-</button>
-              <span class="product__quantity">${productInCart.quantity}</span>
-              <button class="pluss" onclick="increaseQuantity(${id})">+</button>
-            </div>`
-         : `<div class="promo__card__btn">
-              <button onclick="addToCart(${id})" class="basket__btn">В корзину</button>
-            </div>`
-     }
+        <div class="promo__card__btn">
+          <button onclick="addToCart(${id})" class="basket__btn">В корзину</button>
+        </div>
   </div>
 </div>
   `;

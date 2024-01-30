@@ -1,3 +1,15 @@
+let cartQuantity = document.querySelector(".cart__quantity");
+
+let cartJson = localStorage.getItem("cart");
+
+let cartProduct = JSON.parse(cartJson) || [];
+
+function getCartQuantity() {
+  cartQuantity.textContent = cartProduct.length;
+}
+
+getCartQuantity();
+
 const heroCartLeft = document.querySelector(".hero__cart__left");
 
 function getSelectedProduct({
