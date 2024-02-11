@@ -24,7 +24,7 @@ function getSelectedProduct({
   quantity,
 }) {
   return `
-    <a class="hero__cart__item" href="/pages/product.html">
+    <div class="hero__cart__item">
       <div class="hero__cart__item__left">
           <div class="hero__cart__item__frame">
             <img src=${images[0]} alt=${name} />
@@ -49,7 +49,7 @@ function getSelectedProduct({
         </div>
         <p class="product__price">${price} ₽</p>
       </div>
-    </a>
+    </div>
   `;
 }
 

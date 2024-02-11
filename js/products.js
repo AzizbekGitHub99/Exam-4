@@ -36,7 +36,7 @@ function getPromoCard({
   }
   let productInCart = cartProduct.find((pr) => pr.id === id);
   return `
-    <a class="promo__card" href="/pages/product.html">
+    <div class="promo__card">
       <div class="promo__card__img">
         <img class="product__img" src=${images[0]} />
         <button class="like-btn">
@@ -74,7 +74,7 @@ function getPromoCard({
               </div>`
         }
       </div>
-    </a>
+    </div>
   `;
 }
 
