@@ -17,7 +17,7 @@ const products = [
       "A long, curved fruit with a yellow skin and sweet, creamy white flesh.",
     price: 71,
     rating: 5,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/22.png"],
   },
   {
@@ -28,7 +28,7 @@ const products = [
       "A staple food made from flour, water, and yeast, baked into a loaf.",
     price: 88,
     rating: 5,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/18.png"],
   },
   {
@@ -39,7 +39,7 @@ const products = [
       "Watermelon is grown in favorable climates from tropical to temperate regions worldwide for its large edible fruit,",
     price: 94,
     rating: 4.5,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/37.png"],
   },
   {
@@ -50,7 +50,7 @@ const products = [
       "A root vegetable with a crunchy texture and a sweet, earthy flavor.",
     price: 82,
     rating: 5,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/carrot.png"],
   },
   {
@@ -61,7 +61,7 @@ const products = [
       "A dairy product made from milk, with a variety of textures and flavors.",
     price: 91,
     rating: 3.5,
-    discount: "-50%",
+    discount: 50,
     images: ["../assets/images/products/10.png"],
   },
   {
@@ -72,7 +72,7 @@ const products = [
       "A type of poultry, often used as a source of protein in meals.",
     price: 68,
     rating: 3.5,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/27.png"],
   },
   {
@@ -83,7 +83,7 @@ const products = [
       "A sweet food made from cacao beans, used in a variety of desserts and confections.",
     price: 61,
     rating: 4.5,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/32.png"],
   },
   {
@@ -94,7 +94,7 @@ const products = [
       "A dark, bitter beverage made from roasted coffee beans, typically used as a pick-me-up.",
     price: 98,
     rating: 5,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/29.png"],
   },
   {
@@ -116,7 +116,7 @@ const products = [
       "A type of seafood, known for its omega-3 fatty acids and high protein content.",
     price: 89,
     rating: 3.5,
-    discount: "-50%",
+    discount: 50,
     images: ["../assets/images/products/27.png"],
   },
   {
@@ -127,7 +127,7 @@ const products = [
       "A small, sweet fruit that grows in clusters, often used in wine-making.",
     price: 61,
     rating: 4,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/grapes.png"],
   },
   {
@@ -149,7 +149,7 @@ const products = [
       "A type of sausage served in a long roll, often used as a quick and convenient food.",
     price: 84,
     rating: 4.5,
-    discount: "-50%",
+    discount: 50,
     images: ["../assets/images/products/hotdog.jpg"],
   },
   {
@@ -182,7 +182,7 @@ const products = [
       "Eggs are oval-shaped reproductive structures produced by female birds and some reptiles.",
     price: 70,
     rating: 4.5,
-    discount: "-50%",
+    discount: 50,
     images: ["../assets/images/products/egg.png"],
   },
   {
@@ -237,7 +237,7 @@ const products = [
       "Mangoes are juicy, sweet tropical fruits with a fleshy interior and a large, oblong seed in the center.",
     price: 80,
     rating: 5,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/28.png"],
   },
   {
@@ -248,7 +248,7 @@ const products = [
       "Noodles are a type of pasta made from wheat flour and water, often used in Asian cuisine.",
     price: 93,
     rating: 3.5,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/12.png"],
   },
   {
@@ -270,7 +270,7 @@ const products = [
       "Bacon is a popular breakfast food made from cured pork belly, it is newly delivered.",
     price: 71,
     rating: 3.5,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/14.png"],
   },
   {
@@ -292,7 +292,7 @@ const products = [
       "Waffles are a type of breakfast food made from batter cooked in a waffle iron.",
     price: 97,
     rating: 4.5,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/Waffles.jpg"],
   },
   {
@@ -303,7 +303,7 @@ const products = [
       "Fried Rice is a type of rice dish that is stir-fried in a pan with oil and other ingredients.",
     price: 81,
     rating: 4,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/FriedRice.jpg"],
   },
   {
@@ -314,7 +314,7 @@ const products = [
       "Spaghetti is a type of pasta made from wheat flour and water, usually served with sauce.",
     price: 96,
     rating: 3,
-    discount: "-50%",
+    discount: 50,
     images: ["../assets/images/products/Spaghetti.jpg"],
   },
   {
@@ -336,7 +336,7 @@ const products = [
       "A grilled cheese sandwich is a hot sandwich made from cheese and bread.",
     price: 100,
     rating: 5,
-    discount: "-50%",
+    discount: 50,
     images: ["../assets/images/products/GrilledCheese.jpg"],
   },
   {
@@ -347,7 +347,7 @@ const products = [
       "Steak is a popular dinner dish made from a cut of beef that is usually grilled or pan-fried.",
     price: 63,
     rating: 4.5,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/Steak.jpg"],
   },
   {
@@ -358,7 +358,7 @@ const products = [
       "Salmon is a type of fish that is often grilled or baked and served as a main course.",
     price: 82,
     rating: 4.5,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/Salmon.jpg"],
   },
   {
@@ -369,7 +369,7 @@ const products = [
       "Chicken Alfredo is a pasta dish made with chicken, alsjfkdlkasdfhlkjh.",
     price: 94,
     rating: 4,
-    discount: "-20%",
+    discount: 20,
     images: ["../assets/images/products/ChickenAlfredo.jpg"],
   },
   {

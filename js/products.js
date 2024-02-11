@@ -36,45 +36,45 @@ function getPromoCard({
   }
   let productInCart = cartProduct.find((pr) => pr.id === id);
   return `
-<div class="promo__card">
-  <div class="promo__card__img">
-      <img class="product__img" src=${images[0]} />
-    <button class="like-btn">
-      <img class="card__heart" src="../../assets/images/like-btn.svg" />
-    </button>
-    <span class="product__discount ${
-      discount === 0 ? "no__discount" : ""
-    }}">${discount}</span>
-  </div>
-  <div class="promo__card__content">
-    <div class="promo__card__top">
-      <div class="promo__card__top__left">
-        <h1>${price}</h1>
-        <p>С картой</p>
+    <a class="promo__card" href="/pages/product.html">
+      <div class="promo__card__img">
+        <img class="product__img" src=${images[0]} />
+        <button class="like-btn">
+          <img class="card__heart" src="../../assets/images/like-btn.svg" />
+        </button>
+        ${
+          discount === 0
+            ? ""
+            : `<span class="product__discount"> -${discount}%</span>`
+        }
       </div>
-      <div class="promo__card__top__right">
-        <h2>${price}</h2>
-        <p>Обычная</p>
+      <div class="promo__card__content">
+        <div class="promo__card__top">
+          <div class="promo__card__top__left">
+            <h1>${price}</h1>
+            <p>С картой</p>
+          </div>
+          <div class="promo__card__top__right">
+            <h2>${price}</h2>
+            <p>Обычная</p>
+          </div>
+        </div>
+        <h5 class="promo__card__text">${name}</h5>
+        <p class="card__description">${description}</p>
+        <img src=${getRating()} alt=${name}/>
+        ${
+          productInCart
+            ? `<div class = "promo__card__btn plus__minus">
+                <button class="minus" onclick="decreaseQuantity(${id})">-</button>
+                <span class="product__quantity">${productInCart.quantity}</span>
+                <button class="pluss" onclick="increaseQuantity(${id})">+</button>
+              </div>`
+            : `<div class="promo__card__btn">
+                <button onclick="addToCart(${id})" class="basket__btn">В корзину</button>
+              </div>`
+        }
       </div>
-    </div>
-    <h5 class="promo__card__text">${name}</h5>
-    <p class="card__description">${description}</p>
-    <img src=${getRating()}
-    alt=${name}
-     />
-     ${
-       productInCart
-         ? `<div class = "promo__card__btn plus__minus">
-              <button class="minus" onclick="decreaseQuantity(${id})">-</button>
-              <span class="product__quantity">${productInCart.quantity}</span>
-              <button class="pluss" onclick="increaseQuantity(${id})">+</button>
-            </div>`
-         : `<div class="promo__card__btn">
-              <button onclick="addToCart(${id})" class="basket__btn">В корзину</button>
-            </div>`
-     }
-  </div>
-</div>
+    </a>
   `;
 }
 
@@ -148,7 +148,7 @@ function getSearchProduct({
     }
   }
   return `
-    <div class="search__product">
+    <a class="search__product" href="/pages/product.html">
         <div class="search__product__img__div">
         <img
             class="search__product__img"
@@ -163,7 +163,7 @@ function getSearchProduct({
         </div>
         </div>
         <p>${price}$</p>
-    </div>
+    </a>
     `;
 }
 
@@ -203,14 +203,14 @@ function getPagination() {
 
   allProductsRow.innerHTML = " ";
 
-  let startProduct = (activePage - 1) * 4;
-  let endProduct = activePage * 4;
+  let startProduct = (activePage - 1) * LIMIT;
+  let endProduct = activePage * LIMIT;
 
   products.slice(startProduct, endProduct).map((el) => {
     allProductsRow.innerHTML += getPromoCard(el);
   });
 
-  let pages = Math.ceil(results2.length / 4);
+  let pages = Math.ceil(results2.length / LIMIT);
 
   pagination.innerHTML = `
     <button onclick="getPage('-')" class="pagination__prev">
@@ -268,9 +268,8 @@ function addToCart(id) {
     productFound.quantity = 1;
     cartProduct.push(productFound);
   }
-  getCartQuantity();
   getPagination();
-
+  getCartQuantity();
   localStorage.setItem("cart", JSON.stringify(cartProduct));
 }
 
@@ -282,6 +281,7 @@ function increaseQuantity(id) {
     return pr;
   });
   getPagination();
+  getCartQuantity();
   localStorage.setItem("cart", JSON.stringify(cartProduct));
 }
 

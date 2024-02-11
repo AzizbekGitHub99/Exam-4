@@ -80,6 +80,17 @@ toggleBottom.addEventListener("click", () => {
   }
 });
 
+// HEADER CATALOG MAPPING
+const catalogRedndering = document.querySelector(".catalog-rendering");
+
+function mappingCategories() {
+  categories.map((el) => {
+    return (catalogRedndering.innerHTML += `
+      <li><a href="pages/categories.html">${el.name}</a></li>
+    `);
+  });
+}
+
+mappingCategories()
+
 // ADD TO CART
-
-

@@ -22,29 +22,7 @@
   <body>
     <div id="katalog">
       <div class="katalog__menu container__1250">
-        <ul>
-          <li><a href="pages/categories.html">Молоко, сыр, яйцо</a></li>
-          <li><a href="pages/categories.html">Хлеб</a></li>
-          <li><a href="pages/categories.html">Фрукты и овощи</a></li>
-          <li><a href="pages/categories.html">Замороженные продукты</a></li>
-        </ul>
-        <ul>
-          <li><a href="pages/categories.html">Напитки</a></li>
-          <li><a href="pages/categories.html">Кондитерские изделия</a></li>
-          <li><a href="pages/categories.html">Чай, кофе</a></li>
-        </ul>
-        <ul>
-          <li><a href="pages/categories.html">Бакалея</a></li>
-          <li><a href="pages/categories.html">Здоровое питание</a></li>
-          <li><a href="pages/categories.html">Зоотовары</a></li>
-        </ul>
-        <ul>
-          <li>
-            <a href="pages/categories.html">Непродовольственные товары</a>
-          </li>
-          <li><a href="pages/categories.html">Детское питание</a></li>
-          <li><a href="pages/categories.html">Мясо, птица, колбаса</a></li>
-        </ul>
+        <ul class="catalog-rendering"></ul>
       </div>
     </div>
     <header>
@@ -70,7 +48,7 @@
               <span class="hamburger-center"></span>
               <span class="hamburger-bottom"></span>
             </button>
-            <a href="pages/categories.html">Каталог</a>
+            <a href="./categories.html">Каталог</a>
           </div>
           <form>
             <div class="nav__search">
@@ -89,20 +67,20 @@
           </form>
           <ul class="nav__row__items">
             <div class="nav__items__like">
-              <a href="pages/favorite.html">
+              <a href="./favorite.html">
                 <img src="../assets/images/like-icon.svg" alt="" />
                 <h6>Избранное</h6>
               </a>
             </div>
             <div class="nav__items__product">
-              <a href="pages/product.html">
+              <a href="./products.html">
                 <img src="../assets/images/product-icon.svg" alt="" />
-                <h6>продукты</h6>
+                <h6>Продукты</h6>
               </a>
             </div>
             <div class="nav__items__basket">
-              <span class="cart__quantity">0</span>
-              <a class="shopping__cart" href="pages/cart.html">
+              <span class="plus cart__quantity">0</span>
+              <a href="./cart.html">
                 <img src="../assets/images/basket.svg" alt="" />
                 <h6>Корзина</h6>
               </a>
@@ -148,16 +126,16 @@
     </header>
     <div id="header__bottom__links">
       <div id="katalog__bottom">
-        <a href="pages/products.html">Все продукты</a>
-        <a href="pages/categories.html">Категории </a>
-        <a href="pages/category.html">Категория </a>
-        <a href="pages/product.html">Товар </a>
-        <a href="pages/favorite.html">Избраное </a>
-        <a href="pages/cart.html">Корзина </a>
-        <a href="pages/about.html">О нас</a>
-        <a href="pages/contact.html">Контакты </a>
-        <a href="pages/vacancy.html">Вакансии </a>
-        <a href="pages/articles.html">Статьи </a>
+        <a href="./products.html">Все продукты</a>
+        <a href="./categories.html">Категории </a>
+        <a href="./category.html">Категория </a>
+        <a href="./product.html">Товар </a>
+        <a href="./favorite.html">Избраное </a>
+        <a href="./cart.html">Корзина </a>
+        <a href="./about.html">О нас</a>
+        <a href="./contact.html">Контакты </a>
+        <a href="./vacancy.html">Вакансии </a>
+        <a href="./articles.html">Статьи </a>
       </div>
     </div>
     <main id="main">
@@ -172,7 +150,7 @@
           </div>
           <span class="hero__cart__title">
             Корзина
-            <p class="product__count">0</p>
+            <p class="product__count cart__quantity">0</p>
           </span>
           <div class="control__product">
             <label class="select__all">
@@ -183,44 +161,15 @@
           </div>
           <div class="hero__cart__row">
             <div class="hero__cart__left"></div>
-            <div class="hero__cart__right">
-              <div class="hero__cart__right__top">
-                <form>
-                  <input type="checkbox" name="checkbox" id="checkbox" />
-                  <span>Списать 200 ₽</span>
-                </form>
-                <p>На карте накоплено 200 ₽</p>
-              </div>
-              <div class="hero__cart__right__center">
-                <div class="size__product">
-                  <p><span>3</span> товара</p>
-                  <h4 class="all__price">258,10 ₽</h4>
-                </div>
-                <div class="discount__price">
-                  <p>Скидка</p>
-                  <h4>-8,01 ₽</h4>
-                </div>
-              </div>
-              <div class="hero__cart__right__bottom">
-                <div class="total__price">
-                  <div>
-                    <p>Итог</p>
-                    <h2>250,09 ₽</h2>
-                  </div>
-                  <img src="../assets/images/bonus.svg" alt="" />
-                </div>
-              </div>
-              <div class="hero__cart__right__buttons">
-                <button class="chekout__btn">Оформить заказ</button>
-              </div>
-            </div>
+            <div class="hero__cart__right"></div>
           </div>
         </div>
       </section>
     </main>
-    <script src="../js/cosnt.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/const.js"></script>
+    <script src="../js/categories-data.js"></script>
     <script src="../js/products-data.js"></script>
-    <script src="../js/karzinka.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/basket.js"></script>
   </body>
 </html>

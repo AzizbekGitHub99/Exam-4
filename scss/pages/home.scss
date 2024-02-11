@@ -103,6 +103,9 @@
         color: var.$white-color;
         border-radius: 4px;
       }
+      .no__discount {
+        display: none;
+      }
       .card__heart {
         display: inline;
         position: absolute;
@@ -499,3 +502,4 @@
 }
 
 // RULES END
+

@@ -1,0 +1,6 @@
+@use "../global";
+@use "../utils/variables" as var;
+
+body {
+  background-color: var.$bgc-main;
+}

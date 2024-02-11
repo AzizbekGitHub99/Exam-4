@@ -1,99 +1,94 @@
-const promoRow = document.querySelector(".promo__row");
+const discountRow = document.querySelector(".discount__row");
 const newsRow = document.querySelector(".news__row");
 const boughtRow = document.querySelector(".bought__row");
 
-function getPromoCard({
-  id,
-  name,
-  category,
-  description,
-  price,
-  rating,
-  discount,
-  images,
-}) {
-  function getRating() {
-    if (rating == 5) {
-      return `../assets/images/rating5.svg`;
-    } else if (rating == 4.5) {
-      return `../assets/images/rating4.5.svg`;
-    } else if (rating == 4) {
-      return `../assets/images/rating4.svg`;
-    } else if (rating == 3.5) {
-      return `../assets/images/rating2.5.svg`;
-    } else if (rating == 3) {
-      return `../assets/images/rating3.svg`;
-    } else if (rating == 2) {
-      return `../assets/images/rating2.svg`;
-    } else if (rating == 1) {
-      return `../assets/images/rating1.svg`;
-    }
-  }
+// Rendering home products start
 
-  return `
-<div class="promo__card">
-  <div class="promo__card__img">
-      <img class="product__img" src=${images[0]} />
-    <button class="like-btn">
-      <img class="card__heart" src="../../assets/images/like-btn.svg" />
-    </button>
-    <span class="product__discount ${
-      discount === 0 ? "no__discount" : ""
-    }}">${discount}</span>
-  </div>
-  <div class="promo__card__content">
-    <div class="promo__card__top">
-      <div class="promo__card__top__left">
-        <h1>${price}</h1>
-        <p>С картой</p>
-      </div>
-      <div class="promo__card__top__right">
-        <h2>${price}</h2>
-        <p>Обычная</p>
-      </div>
-    </div>
-    <h5 class="promo__card__text">${name}</h5>
-    <p class="card__description">${description}</p>
-    <img src=${getRating()}
-    alt=${name}
-     />
-        <div class="promo__card__btn">
-          <button onclick="addToCart(${id})" class="basket__btn">В корзину</button>
-        </div>
-  </div>
-</div>
-  `;
+function renderHomeProd() {
+  discountRow.innerHTML = "";
+  newsRow.innerHTML = "";
+  boughtRow.innerHTML = "";
+  // discount mapping start
+  let discountProducts = products.filter((el) => el.discount).slice(-4);
+
+  discountProducts.map((el) => {
+    discountRow.innerHTML += getPromoCard(el);
+  });
+  // discount mapping end
+
+  // newProducts mapping start
+  let newProducts = products.slice(-4);
+
+  newProducts.map((el) => {
+    newsRow.innerHTML += getPromoCard(el);
+  });
+  // newProducts mapping end
+
+  // ratingProduct mapping start
+  let ratingProduct = products
+    .toSorted((a, b) => a.rating - b.rating)
+    .slice(-4);
+
+  ratingProduct.map((el) => {
+    boughtRow.innerHTML += getPromoCard(el);
+  });
+  // ratingProduct mapping end
 }
 
-// discount mapping start
+renderHomeProd()
+// Rendering home products end
 
-let discountProducts = products.filter((el) => el.discount).slice(-4);
+function addToCart(id) {
+  let productFound = products.find((pr) => pr.id === id);
+  let productInCart = cartProduct.find((pr) => pr.id == id);
 
-discountProducts.map((el) => {
-  promoRow.innerHTML += getPromoCard(el);
-});
+  if (productInCart) {
+    cartProduct = cartProduct.map((pr) => {
+      if (pr.id === id) {
+        pr.quantity++;
+      }
+      return pr;
+    });
+  } else {
+    productFound.quantity = 1;
+    cartProduct.push(productFound);
+  }
+  renderHomeProd();
+  getCartQuantity();
+  localStorage.setItem("cart", JSON.stringify(cartProduct));
+}
 
-// discount mapping end
+// Card buttons start
+function increaseQuantity(id) {
+  cartProduct = cartProduct.map((pr) => {
+    if (pr.id === id) {
+      pr.quantity++;
+    }
+    return pr;
+  });
+  renderHomeProd();
+  getCartQuantity();
+  localStorage.setItem("cart", JSON.stringify(cartProduct));
+}
 
-// newProducts mapping start
+function decreaseQuantity(id) {
+  let productInCart = cartProduct.find((pr) => pr.id === id);
+  if (productInCart.quantity === 1) {
+    cartProduct = cartProduct.filter((pr) => pr.id !== id);
+  } else {
+    cartProduct = cartProduct.map((pr) => {
+      if (pr.id === id) {
+        pr.quantity--;
+      }
+      return pr;
+    });
+  }
+  renderHomeProd();
+  getCartQuantity();
+  localStorage.setItem("cart", JSON.stringify(cartProduct));
+}
+// Card buttons end
 
-let newProducts = products.slice(-4);
-
-newProducts.map((el) => {
-  newsRow.innerHTML += getPromoCard(el);
-});
-
-// newProducts mapping end
-
-// ratingProduct mapping start
-
-let ratingProduct = products.toSorted((a, b) => a.rating - b.rating).slice(-4);
-
-ratingProduct.map((el) => {
-  boughtRow.innerHTML += getPromoCard(el);
-});
-
-// ratingProduct mapping end
 
 // MAP TAB
 
