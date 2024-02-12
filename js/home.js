@@ -35,8 +35,34 @@ function renderHomeProd() {
   // ratingProduct mapping end
 }
 
-renderHomeProd()
+renderHomeProd();
 // Rendering home products end
+
+// Card buttons start
+
+function likeToggle(id) {
+  let productInFavorite = favoriteProduct.find((pr) => pr.id === id);
+console.log(productInFavorite);
+  if (productInFavorite) {
+    favoriteProduct = favoriteProduct.map((pr) => {
+      if (pr.id === id) {
+        pr.isLiked = false;
+      }
+      return pr;
+    });
+  } else {
+    favoriteProduct = favoriteProduct.map((pr) => {
+      if (pr.id === id) {
+        pr.isLiked = true;
+      }
+      return pr;
+    });
+    favoriteProduct.push(products.find((pr) => pr.id === id));
+  }
+  renderHomeProd();
+  getCartQuantity();
+  localStorage.setItem("favorite", JSON.stringify(favoriteProduct));
+}
 
 function addToCart(id) {
   let productFound = products.find((pr) => pr.id === id);
@@ -58,7 +84,6 @@ function addToCart(id) {
   localStorage.setItem("cart", JSON.stringify(cartProduct));
 }
 
-// Card buttons start
 function increaseQuantity(id) {
   cartProduct = cartProduct.map((pr) => {
     if (pr.id === id) {
@@ -88,7 +113,6 @@ function decreaseQuantity(id) {
   localStorage.setItem("cart", JSON.stringify(cartProduct));
 }
 // Card buttons end
-
 
 // MAP TAB
 

@@ -1,1 +1,1 @@
-const LIMIT = 8;
+const LIMIT = 40;

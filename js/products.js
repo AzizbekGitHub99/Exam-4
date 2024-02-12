@@ -35,12 +35,17 @@ function getPromoCard({
     }
   }
   let productInCart = cartProduct.find((pr) => pr.id === id);
+  let productInFavorite = favoriteProduct.find((pr) => pr.id === id);
   return `
     <div class="promo__card">
       <div class="promo__card__img">
         <img class="product__img" src=${images[0]} />
         <button class="like-btn">
-          <img class="card__heart" src="../../assets/images/like-btn.svg" />
+        ${
+          productInFavorite
+            ? `<img onclick="likeToogle(${id}" class="card__heart" src="../../assets/images/hearted.svg" />`
+            : `<img onclick="likeToogle(${id}" class="card__heart" src="../../assets/images/like-btn.svg" />`
+        }
         </button>
         ${
           discount === 0

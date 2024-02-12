@@ -705,3 +705,83 @@ footer {
 body {
   background-color: #fbf8ec;
 }
+
+.hero__favorite {
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+.hero__favorite__title {
+  color: #414141;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 50px;
+}
+.hero__favorite .line__cramp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.hero__favorite .line__cramp a {
+  color: #414141;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.hero__favorite .line__cramp a:nth-child(2) {
+  color: #c0c0c0;
+}
+.hero__favorite .promo__card {
+  margin-bottom: 30px;
+}
+.hero__favorite .promo__card .no__discount {
+  display: none;
+}
+
+.pagination__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 64px;
+  gap: 10px;
+}
+.pagination__row button {
+  color: #000;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border-radius: 50px;
+  border: 1px solid #FF6633;
+}
+.pagination__row .pagination__page {
+  background-color: transparent;
+}
+.pagination__row .pagination__prev,
+.pagination__row .pagination__next {
+  background-color: transparent;
+  color: #000;
+}
+.pagination__row .activePage {
+  background-color: #FF6633;
+  color: #fff;
+}
+.pagination__row .disabled__btn {
+  background-color: #eaeaea;
+  color: #c0c0c0;
+  border: none;
+}
