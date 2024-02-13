@@ -1,7 +1,9 @@
-const allProductsRow = document.querySelector(".promo__row");
-const searchInput = document.querySelectorAll(".search__input");
-const searchingContent = document.querySelectorAll(".searching__content");
-const pagination = document.querySelector(".pagination__row");
+let allProductsRow = document.querySelector(".promo__row");
+let searchInput = document.querySelectorAll(".search__input");
+let searchingContent = document.querySelectorAll(".searching__content");
+let pagination = document.querySelector(".pagination__row");
+let favoriteJson = localStorage.getItem("favorite");
+let favoriteProducts = JSON.parse(favoriteJson) || [];
 
 let search = "";
 
@@ -35,7 +37,7 @@ function getPromoCard({
     }
   }
   let productInCart = cartProduct.find((pr) => pr.id === id);
-  let productInFavorite = favoriteProduct.find((pr) => pr.id === id);
+  let productInFavorite = favoriteProducts.find((pr) => pr.id === id);
   return `
     <div class="promo__card">
       <div class="promo__card__img">
@@ -43,8 +45,8 @@ function getPromoCard({
         <button class="like-btn">
         ${
           productInFavorite
-            ? `<img onclick="likeToogle(${id}" class="card__heart" src="../../assets/images/hearted.svg" />`
-            : `<img onclick="likeToogle(${id}" class="card__heart" src="../../assets/images/like-btn.svg" />`
+            ? `<img onclick="likeToggle(${id})" class="card__heart" src="../../assets/images/hearted.svg" />`
+            : `<img onclick="likeToggle(${id})" class="card__heart" src="../../assets/images/like-btn.svg" />`
         }
         </button>
         ${
@@ -256,6 +258,30 @@ function getPage(page) {
   }
   localStorage.setItem("page", activePage);
   getPagination();
+}
+
+function likeToggle(id) {
+  let productInFavorite = favoriteProducts.find((pr) => pr.id === id);
+console.log(productInFavorite);
+  if (productInFavorite) {
+    favoriteProducts = favoriteProducts.map((pr) => {
+      if (pr.id === id) {
+        pr.isLiked = false;
+      }
+      return pr;
+    });
+  } else {
+    favoriteProduct = favoriteProducts.map((pr) => {
+      if (pr.id === id) {
+        pr.isLiked = true;
+      }
+      return pr;
+    });
+    favoriteProducts.push(products.find((pr) => pr.id === id));
+  }
+  getPagination();
+  getCartQuantity();
+  localStorage.setItem("favorite", JSON.stringify(favoriteProducts));
 }
 
 function addToCart(id) {

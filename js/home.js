@@ -41,27 +41,28 @@ renderHomeProd();
 // Card buttons start
 
 function likeToggle(id) {
-  let productInFavorite = favoriteProduct.find((pr) => pr.id === id);
-console.log(productInFavorite);
-  if (productInFavorite) {
-    favoriteProduct = favoriteProduct.map((pr) => {
-      if (pr.id === id) {
-        pr.isLiked = false;
-      }
-      return pr;
-    });
+  let productLiking = products.find((pr) => pr.id === id);
+  if (productLiking.isLiked) {
+    favoriteProducts = favoriteProducts
+      .map((pr) => {
+        if (pr.id === id) {
+          pr.isLiked = false;
+        }
+        return pr;
+      })
+      .filter((pr) => pr.id !== id);
   } else {
-    favoriteProduct = favoriteProduct.map((pr) => {
+    favoriteProducts.push(productLiking);
+    favoriteProducst = favoriteProducts.map((pr) => {
       if (pr.id === id) {
         pr.isLiked = true;
       }
       return pr;
     });
-    favoriteProduct.push(products.find((pr) => pr.id === id));
   }
   renderHomeProd();
   getCartQuantity();
-  localStorage.setItem("favorite", JSON.stringify(favoriteProduct));
+  localStorage.setItem("favorite", JSON.stringify(favoriteProducts));
 }
 
 function addToCart(id) {

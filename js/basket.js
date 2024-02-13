@@ -54,7 +54,7 @@ function getSelectedProduct({
 }
 
 function renderCartProduct() {
-  heroCartLeft.innerHTML = "";
+  heroCartLeft.innerHTML = " ";
   cartProduct.map((pr) => {
     heroCartLeft.innerHTML += getSelectedProduct(pr);
   });
