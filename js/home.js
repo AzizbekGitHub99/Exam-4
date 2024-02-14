@@ -41,24 +41,23 @@ renderHomeProd();
 // Card buttons start
 
 function likeToggle(id) {
-  let productLiking = products.find((pr) => pr.id === id);
-  if (productLiking.isLiked) {
-    favoriteProducts = favoriteProducts
-      .map((pr) => {
-        if (pr.id === id) {
-          pr.isLiked = false;
-        }
-        return pr;
-      })
-      .filter((pr) => pr.id !== id);
+  let productInFavorite = favoriteProducts.find((pr) => pr.id === id);
+  if (productInFavorite) {
+    favoriteProducts = favoriteProducts.map((pr) => {
+      if (pr.id === id) {
+        pr.isLiked = false;
+      }
+      return pr;
+    });
+    favoriteProducts = favoriteProducts.filter((pr) => pr.id !== id);
   } else {
-    favoriteProducts.push(productLiking);
-    favoriteProducst = favoriteProducts.map((pr) => {
+    favoriteProducts = favoriteProducts.map((pr) => {
       if (pr.id === id) {
         pr.isLiked = true;
       }
       return pr;
     });
+    favoriteProducts.push(products.find((pr) => pr.id === id));
   }
   renderHomeProd();
   getCartQuantity();

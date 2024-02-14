@@ -8,6 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/category.min.css" />
+    <link rel="stylesheet" href="../css/home.min.css" />
     <title>Category</title>
   </head>
   <body>
@@ -130,18 +131,24 @@
       </div>
     </div>
     <main id="main">
-      <section id="hero__products">
-        <div class="container__1250 hero__products">
+      <section id="hero__category">
+        <div class="container__1250 hero__category">
           <div class="line__cramp">
             <a href="../index.html"
               >Главная
               <img src="../assets/images/arrow-right.png" alt="" />
             </a>
-            <a href="#">Все продукты</a>
+            <a href="../categories.html"
+              >Каталог
+              <img src="../assets/images/arrow-right.png" alt="" />
+            </a>
+            <a href="#" class="category__name"></a>
           </div>
-          <h2 class="hero__products__title">Все продукты</h2>
-          <div class="promo__row category__row"></div>
-          <div class="pagination__row"></div>
+          <h2 class="hero__category__title category__name"></h2>
+          <div class="hero__category__sides">
+            <div class="aside"></div>
+            <div class="category__row promo__row"></div>
+          </div>
         </div>
       </section>
     </main>

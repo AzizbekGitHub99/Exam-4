@@ -64,12 +64,13 @@ toggleBottom.addEventListener("click", () => {
 });
 
 // HEADER CATALOG MAPPING
-const catalogRedndering = document.querySelector(".catalog-rendering");
+let catalogRow = document.querySelector(".catalog-rendering");
 
 function mappingCategories() {
+  catalogRow.innerHTML = ""
   categories.map(({id, name}) => {
-    return (catalogRedndering.innerHTML += `
-      <li><a onclick="setCategory(${id})" href="/pages/category.html">${name}</a></li>
+    return (catalogRow.innerHTML += `
+      <li><a onclick="setCategory(${name})" href="/pages/category.html">${name}</a></li>
     `);
   });
 }
@@ -77,7 +78,7 @@ function mappingCategories() {
 mappingCategories();
 
 function setCategory(cate) {
-  let curCategory = categories.find(ca => ca.id == cate)
+  let curCategory = categories.find(ca => ca.name == cate)
   localStorage.setItem("category", JSON.stringify(curCategory));
 }
 

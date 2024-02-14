@@ -34,7 +34,8 @@ function getSingleProduct(curId) {
             <a href="/pages/categories.html"
               >Каталог <img src="../assets/images/chevron-right.svg" alt=""
             /></a>
-            <a href="#"
+            <a href="/pages/category.html" 
+              onclick="setCategory(${category})"
               >${category}
               <img src="../assets/images/chevron-right.svg" alt=""
             /></a>
@@ -177,8 +178,9 @@ function likeToggle(id) {
       }
       return pr;
     });
+    favoriteProducts = favoriteProducts.filter((pr) => pr.id !== id);
   } else {
-    favoriteProduct = favoriteProducts.map((pr) => {
+    favoriteProducts = favoriteProducts.map((pr) => {
       if (pr.id === id) {
         pr.isLiked = true;
       }

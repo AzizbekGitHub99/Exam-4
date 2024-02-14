@@ -260,8 +260,7 @@ function getPage(page) {
   getPagination();
 }
 
-function likeToggle(e, id) {
-  console.log(e, id);
+function likeToggle(id) {
   let productInFavorite = favoriteProducts.find((pr) => pr.id === id);
   if (productInFavorite) {
     favoriteProducts = favoriteProducts.map((pr) => {
@@ -270,8 +269,9 @@ function likeToggle(e, id) {
       }
       return pr;
     });
+    favoriteProducts = favoriteProducts.filter((pr) => pr.id !== id);
   } else {
-    favoriteProduct = favoriteProducts.map((pr) => {
+    favoriteProducts = favoriteProducts.map((pr) => {
       if (pr.id === id) {
         pr.isLiked = true;
       }
@@ -334,5 +334,5 @@ function decreaseQuantity(id) {
 }
 
 function setCurId(id) {
-  localStorage.setItem("currentProd", JSON.stringify(id));  
+  localStorage.setItem("currentProd", JSON.stringify(id));
 }

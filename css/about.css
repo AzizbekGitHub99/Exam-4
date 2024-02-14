@@ -329,6 +329,8 @@ header .nav__items__basket span {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
   gap: 24px;
   height: 100%;
   width: 100%;
