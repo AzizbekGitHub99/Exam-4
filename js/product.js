@@ -1,6 +1,7 @@
 const singleProductHero = document.querySelector(".hero");
 let prodBoughtRow = document.querySelector(".bought__row");
 let prodDiscountRow = document.querySelector(".discount__row");
+let curImg = 0;
 
 function getSingleProduct(curId) {
   let { id, name, category, description, price, rating, discount, images } =
@@ -61,22 +62,22 @@ function getSingleProduct(curId) {
           <div class="hero__product">
             <div class="hero__product__left">
               <div class="product__images">
-                <img
+                <img onclick="setImg(0)"
                   class="product__mini1"
                   src=${images[0]}
                   alt=${name}
                 />
-                <img
+                <img onclick="setImg(1)"
                   class="product__mini1"
                   src=${images[1]}
                   alt=${name}
                 />
-                <img
+                <img onclick="setImg(2)"
                   class="product__mini1"
                   src=${images[2]}
                   alt=${name}
                 />
-                <img
+                <img onclick="setImg(3)"
                   class="product__mini1"
                   src=${images[3]}
                   alt=${name}
@@ -85,7 +86,7 @@ function getSingleProduct(curId) {
               <div class="product__image">
                 <img
                   class="product__big1"
-                  src=${images[0]}
+                  src=${images[curImg]}
                   alt=${name}
                 />
               </div>
@@ -240,4 +241,10 @@ function decreaseQuantity(id) {
   renderProductPage();
   getCartQuantity();
   localStorage.setItem("cart", JSON.stringify(cartProduct));
+}
+
+function setImg(num) {
+  curImg = +num;
+  renderProductPage();
+  getCartQuantity();
 }
