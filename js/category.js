@@ -13,7 +13,6 @@ function renderCategoryPage() {
   let currentCategoryProducts = products.filter(
     (el) => el.category === curCate.name
   );
-  console.log(currentCategoryProducts);
 
   currentCategoryProducts.map((el) => {
     categoryRow.innerHTML += getPromoCard(el);
