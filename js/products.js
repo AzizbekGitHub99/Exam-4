@@ -56,7 +56,7 @@ function getPromoCard({
         }
       </div>
       <div class="promo__card__content">
-        <div class="promo__card__top">
+        <a href="/pages/product.html" onclick="setCurId(${id})" class="promo__card__top">
           <div class="promo__card__top__left">
             <h1>${price}</h1>
             <p>С картой</p>
@@ -65,7 +65,7 @@ function getPromoCard({
             <h2>${price}</h2>
             <p>Обычная</p>
           </div>
-        </div>
+        </a>
         <h5 class="promo__card__text">${name}</h5>
         <p class="card__description">${description}</p>
         <img src=${getRating()} alt=${name}/>
@@ -260,9 +260,9 @@ function getPage(page) {
   getPagination();
 }
 
-function likeToggle(id) {
+function likeToggle(e, id) {
+  console.log(e, id);
   let productInFavorite = favoriteProducts.find((pr) => pr.id === id);
-console.log(productInFavorite);
   if (productInFavorite) {
     favoriteProducts = favoriteProducts.map((pr) => {
       if (pr.id === id) {
@@ -331,4 +331,8 @@ function decreaseQuantity(id) {
   getPagination();
   getCartQuantity();
   localStorage.setItem("cart", JSON.stringify(cartProduct));
+}
+
+function setCurId(id) {
+  localStorage.setItem("currentProd", JSON.stringify(id));  
 }

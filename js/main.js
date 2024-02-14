@@ -1,24 +1,7 @@
-// let count = 0;
-// const btn = document.querySelectorAll(".basket__btn");
-// const span = document.querySelector(".plus");
-
-// for (let i = 0; i < btn.length; i++) {
-//   btn[i].addEventListener("click", () => {
-//     count++;
-//     span.innerHTML = count;
-//   });
-// }
-
-// let count2 = 0;
-// const btn2 = document.querySelectorAll(".basket__btn");
-// const span2 = document.querySelector(".plus2");
-
-// for (let i = 0; i < btn2.length; i++) {
-//   btn2[i].addEventListener("click", () => {
-//     count2++;
-//     span2.innerHTML = count2;
-//   });
-// }
+let currentIdJson = localStorage.getItem("currentProd");
+let currentId = JSON.parse(currentIdJson) || 0;
+let currentCategoryJson = localStorage.getItem("category");
+let currentCategory = JSON.parse(currentCategoryJson) || "Fruit";
 
 // HEADER KATALOG
 
@@ -84,13 +67,18 @@ toggleBottom.addEventListener("click", () => {
 const catalogRedndering = document.querySelector(".catalog-rendering");
 
 function mappingCategories() {
-  categories.map((el) => {
+  categories.map(({id, name}) => {
     return (catalogRedndering.innerHTML += `
-      <li><a href="pages/categories.html">${el.name}</a></li>
+      <li><a onclick="setCategory(${id})" href="/pages/category.html">${name}</a></li>
     `);
   });
 }
 
-mappingCategories()
+mappingCategories();
+
+function setCategory(cate) {
+  let curCategory = categories.find(ca => ca.id == cate)
+  localStorage.setItem("category", JSON.stringify(curCategory));
+}
 
 // ADD TO CART

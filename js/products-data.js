@@ -7,7 +7,12 @@ const products = [
     price: 89,
     rating: 5,
     discount: 0,
-    images: ["../assets/images/products/17.png"],
+    images: [
+      "../assets/images/products/1.png",
+      "../assets/images/products/2.png",
+      "../assets/images/products/3.png",
+      "../assets/images/products/4.png",
+    ],
   },
   {
     id: 2,
@@ -18,7 +23,12 @@ const products = [
     price: 71,
     rating: 5,
     discount: 20,
-    images: ["../assets/images/products/22.png"],
+    images: [
+      "../assets/images/products/2.png",
+      "../assets/images/products/3.png",
+      "../assets/images/products/4.png",
+      "../assets/images/products/5.png",
+    ],
   },
   {
     id: 3,
@@ -29,18 +39,28 @@ const products = [
     price: 88,
     rating: 5,
     discount: 20,
-    images: ["../assets/images/products/18.png"],
+    images: [
+      "../assets/images/products/3.png",
+      "../assets/images/products/4.png",
+      "../assets/images/products/5.png",
+      "../assets/images/products/6.png",
+    ],
   },
   {
     id: 4,
-    name: "Watermelon",
-    category: "Fruit",
+    name: "Broccoli",
+    category: "Vegetable",
     description:
-      "Watermelon is grown in favorable climates from tropical to temperate regions worldwide for its large edible fruit,",
+      "A green vegetable with a tree-like appearance, known for its high nutrient content.",
     price: 94,
     rating: 4.5,
     discount: 20,
-    images: ["../assets/images/products/37.png"],
+    images: [
+      "../assets/images/products/4.png",
+      "../assets/images/products/5.png",
+      "../assets/images/products/6.png",
+      "../assets/images/products/7.png",
+    ],
   },
   {
     id: 5,
@@ -51,7 +71,12 @@ const products = [
     price: 82,
     rating: 5,
     discount: 20,
-    images: ["../assets/images/products/carrot.png"],
+    images: [
+      "../assets/images/products/5.png",
+      "../assets/images/products/6.png",
+      "../assets/images/products/7.png",
+      "../assets/images/products/8.png",
+    ],
   },
   {
     id: 6,
@@ -62,7 +87,12 @@ const products = [
     price: 91,
     rating: 3.5,
     discount: 50,
-    images: ["../assets/images/products/10.png"],
+    images: [
+      "../assets/images/products/6.png",
+      "../assets/images/products/7.png",
+      "../assets/images/products/8.png",
+      "../assets/images/products/9.png",
+    ],
   },
   {
     id: 7,
@@ -73,7 +103,12 @@ const products = [
     price: 68,
     rating: 3.5,
     discount: 20,
-    images: ["../assets/images/products/27.png"],
+    images: [
+      "../assets/images/products/7.png",
+      "../assets/images/products/8.png",
+      "../assets/images/products/9.png",
+      "../assets/images/products/10.png",
+    ],
   },
   {
     id: 8,
@@ -84,7 +119,12 @@ const products = [
     price: 61,
     rating: 4.5,
     discount: 20,
-    images: ["../assets/images/products/32.png"],
+    images: [
+      "../assets/images/products/8.png",
+      "../assets/images/products/9.png",
+      "../assets/images/products/10.png",
+      "../assets/images/products/11.png",
+    ],
   },
   {
     id: 9,
@@ -95,7 +135,12 @@ const products = [
     price: 98,
     rating: 5,
     discount: 20,
-    images: ["../assets/images/products/29.png"],
+    images: [
+      "../assets/images/products/9.png",
+      "../assets/images/products/10.png",
+      "../assets/images/products/11.png",
+      "../assets/images/products/12.png",
+    ],
   },
   {
     id: 10,
@@ -106,7 +151,12 @@ const products = [
     price: 79,
     rating: 4.5,
     discount: 0,
-    images: ["../assets/images/products/egg.png"],
+    images: [
+      "../assets/images/products/10.png",
+      "../assets/images/products/11.png",
+      "../assets/images/products/12.png",
+      "../assets/images/products/13.png",
+    ],
   },
   {
     id: 11,
@@ -117,7 +167,12 @@ const products = [
     price: 89,
     rating: 3.5,
     discount: 50,
-    images: ["../assets/images/products/27.png"],
+    images: [
+      "../assets/images/products/11.png",
+      "../assets/images/products/12.png",
+      "../assets/images/products/13.png",
+      "../assets/images/products/14.png",
+    ],
   },
   {
     id: 12,
@@ -128,7 +183,12 @@ const products = [
     price: 61,
     rating: 4,
     discount: 20,
-    images: ["../assets/images/products/grapes.png"],
+    images: [
+      "../assets/images/products/12.png",
+      "../assets/images/products/13.png",
+      "../assets/images/products/14.png",
+      "../assets/images/products/15.png",
+    ],
   },
   {
     id: 13,
@@ -139,7 +199,12 @@ const products = [
     price: 87,
     rating: 5,
     discount: 0,
-    images: ["../assets/images/products/13.png"],
+    images: [
+      "../assets/images/products/13.png",
+      "../assets/images/products/14.png",
+      "../assets/images/products/15.png",
+      "../assets/images/products/16.png",
+    ],
   },
   {
     id: 14,
@@ -150,7 +215,12 @@ const products = [
     price: 84,
     rating: 4.5,
     discount: 50,
-    images: ["../assets/images/products/hotdog.jpg"],
+    images: [
+      "../assets/images/products/14.png",
+      "../assets/images/products/15.png",
+      "../assets/images/products/16.png",
+      "../assets/images/products/17.png",
+    ],
   },
   {
     id: 15,
@@ -161,7 +231,12 @@ const products = [
     price: 68,
     rating: 4.5,
     discount: 0,
-    images: ["../assets/images/products/ice-cream.jpg"],
+    images: [
+      "../assets/images/products/15.png",
+      "../assets/images/products/16.png",
+      "../assets/images/products/17.png",
+      "../assets/images/products/18.png",
+    ],
   },
   {
     id: 16,
@@ -172,7 +247,12 @@ const products = [
     price: 74,
     rating: 3.5,
     discount: 0,
-    images: ["../assets/images/products/lemon.jpg"],
+    images: [
+      "../assets/images/products/16.png",
+      "../assets/images/products/17.png",
+      "../assets/images/products/18.png",
+      "../assets/images/products/19.png",
+    ],
   },
   {
     id: 17,
@@ -183,7 +263,12 @@ const products = [
     price: 70,
     rating: 4.5,
     discount: 50,
-    images: ["../assets/images/products/egg.png"],
+    images: [
+      "../assets/images/products/17.png",
+      "../assets/images/products/18.png",
+      "../assets/images/products/19.png",
+      "../assets/images/products/20.png",
+    ],
   },
   {
     id: 18,
@@ -194,7 +279,12 @@ const products = [
     price: 87,
     rating: 4,
     discount: 0,
-    images: ["../assets/images/products/honey.jpg"],
+    images: [
+      "../assets/images/products/18.png",
+      "../assets/images/products/19.png",
+      "../assets/images/products/20.png",
+      "../assets/images/products/21.png",
+    ],
   },
   {
     id: 19,
@@ -205,7 +295,12 @@ const products = [
     price: 83,
     rating: 4.5,
     discount: 0,
-    images: ["../assets/images/products/ice-cream.jpg"],
+    images: [
+      "../assets/images/products/19.png",
+      "../assets/images/products/20.png",
+      "../assets/images/products/21.png",
+      "../assets/images/products/22.png",
+    ],
   },
   {
     id: 20,
@@ -216,7 +311,12 @@ const products = [
     price: 76,
     rating: 5,
     discount: 0,
-    images: ["../assets/images/products/21.png"],
+    images: [
+      "../assets/images/products/20.png",
+      "../assets/images/products/21.png",
+      "../assets/images/products/22.png",
+      "../assets/images/products/23.png",
+    ],
   },
   {
     id: 21,
@@ -227,7 +327,12 @@ const products = [
     price: 77,
     rating: 5,
     discount: 0,
-    images: ["../assets/images/products/ketchup.jpg"],
+    images: [
+      "../assets/images/products/21.png",
+      "../assets/images/products/22.png",
+      "../assets/images/products/23.png",
+      "../assets/images/products/24.png",
+    ],
   },
   {
     id: 22,
@@ -238,7 +343,12 @@ const products = [
     price: 80,
     rating: 5,
     discount: 20,
-    images: ["../assets/images/products/28.png"],
+    images: [
+      "../assets/images/products/22.png",
+      "../assets/images/products/23.png",
+      "../assets/images/products/24.png",
+      "../assets/images/products/25.png",
+    ],
   },
   {
     id: 23,
@@ -249,7 +359,12 @@ const products = [
     price: 93,
     rating: 3.5,
     discount: 20,
-    images: ["../assets/images/products/12.png"],
+    images: [
+      "../assets/images/products/23.png",
+      "../assets/images/products/24.png",
+      "../assets/images/products/25.png",
+      "../assets/images/products/26.png",
+    ],
   },
   {
     id: 24,
@@ -260,7 +375,12 @@ const products = [
     price: 94,
     rating: 4.5,
     discount: 0,
-    images: ["../assets/images/products/15.png"],
+    images: [
+      "../assets/images/products/24.png",
+      "../assets/images/products/25.png",
+      "../assets/images/products/26.png",
+      "../assets/images/products/27.png",
+    ],
   },
   {
     id: 25,
@@ -271,7 +391,12 @@ const products = [
     price: 71,
     rating: 3.5,
     discount: 20,
-    images: ["../assets/images/products/14.png"],
+    images: [
+      "../assets/images/products/25.png",
+      "../assets/images/products/26.png",
+      "../assets/images/products/27.png",
+      "../assets/images/products/28.png",
+    ],
   },
   {
     id: 26,
@@ -282,7 +407,12 @@ const products = [
     price: 63,
     rating: 4,
     discount: 0,
-    images: ["../assets/images/products/pancace.jpg"],
+    images: [
+      "../assets/images/products/26.png",
+      "../assets/images/products/27.png",
+      "../assets/images/products/28.png",
+      "../assets/images/products/29.png",
+    ],
   },
   {
     id: 27,
@@ -293,7 +423,12 @@ const products = [
     price: 97,
     rating: 4.5,
     discount: 20,
-    images: ["../assets/images/products/Waffles.jpg"],
+    images: [
+      "../assets/images/products/27.png",
+      "../assets/images/products/28.png",
+      "../assets/images/products/29.png",
+      "../assets/images/products/30.png",
+    ],
   },
   {
     id: 28,
@@ -304,7 +439,12 @@ const products = [
     price: 81,
     rating: 4,
     discount: 20,
-    images: ["../assets/images/products/FriedRice.jpg"],
+    images: [
+      "../assets/images/products/28.png",
+      "../assets/images/products/29.png",
+      "../assets/images/products/30.png",
+      "../assets/images/products/31.png",
+    ],
   },
   {
     id: 29,
@@ -315,7 +455,12 @@ const products = [
     price: 96,
     rating: 3,
     discount: 50,
-    images: ["../assets/images/products/Spaghetti.jpg"],
+    images: [
+      "../assets/images/products/29.png",
+      "../assets/images/products/30.png",
+      "../assets/images/products/31.png",
+      "../assets/images/products/32.png",
+    ],
   },
   {
     id: 30,
@@ -326,7 +471,12 @@ const products = [
     price: 95,
     rating: 4,
     discount: 0,
-    images: ["../assets/images/products/24.png"],
+    images: [
+      "../assets/images/products/30.png",
+      "../assets/images/products/31.png",
+      "../assets/images/products/32.png",
+      "../assets/images/products/33.png",
+    ],
   },
   {
     id: 31,
@@ -337,7 +487,12 @@ const products = [
     price: 100,
     rating: 5,
     discount: 50,
-    images: ["../assets/images/products/GrilledCheese.jpg"],
+    images: [
+      "../assets/images/products/31.png",
+      "../assets/images/products/32.png",
+      "../assets/images/products/33.png",
+      "../assets/images/products/34.png",
+    ],
   },
   {
     id: 32,
@@ -348,7 +503,12 @@ const products = [
     price: 63,
     rating: 4.5,
     discount: 20,
-    images: ["../assets/images/products/Steak.jpg"],
+    images: [
+      "../assets/images/products/32.png",
+      "../assets/images/products/33.png",
+      "../assets/images/products/34.png",
+      "../assets/images/products/35.png",
+    ],
   },
   {
     id: 33,
@@ -359,7 +519,12 @@ const products = [
     price: 82,
     rating: 4.5,
     discount: 20,
-    images: ["../assets/images/products/Salmon.jpg"],
+    images: [
+      "../assets/images/products/33.png",
+      "../assets/images/products/34.png",
+      "../assets/images/products/35.png",
+      "../assets/images/products/36.png",
+    ],
   },
   {
     id: 34,
@@ -370,7 +535,12 @@ const products = [
     price: 94,
     rating: 4,
     discount: 20,
-    images: ["../assets/images/products/ChickenAlfredo.jpg"],
+    images: [
+      "../assets/images/products/34.png",
+      "../assets/images/products/35.png",
+      "../assets/images/products/36.png",
+      "../assets/images/products/1.png",
+    ],
   },
   {
     id: 35,
@@ -381,7 +551,12 @@ const products = [
     price: 70,
     rating: 1,
     discount: 0,
-    images: ["../assets/images/products/Lasagna.jpg"],
+    images: [
+      "../assets/images/products/35.png",
+      "../assets/images/products/36.png",
+      "../assets/images/products/1.png",
+      "../assets/images/products/2.png",
+    ],
   },
   {
     id: 36,
@@ -392,6 +567,11 @@ const products = [
     price: 98,
     rating: 3.5,
     discount: 0,
-    images: ["../assets/images/products/Chocolate-Chip-Cookies.jpg"],
+    images: [
+      "../assets/images/products/36.png",
+      "../assets/images/products/1.png",
+      "../assets/images/products/2.png",
+      "../assets/images/products/3.png",
+    ],
   },
 ];
