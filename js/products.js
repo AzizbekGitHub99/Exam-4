@@ -155,7 +155,7 @@ function getSearchProduct({
     }
   }
   return `
-    <a class="search__product" href="/pages/product.html">
+    <a class="search__product" href="/pages/product.html" onclick="setCurId(${id})">
         <div class="search__product__img__div">
         <img
             class="search__product__img"

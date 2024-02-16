@@ -3,8 +3,6 @@ let currentId = JSON.parse(currentIdJson) || 0;
 let currentCategoryJson = localStorage.getItem("category");
 let currentCategory = JSON.parse(currentCategoryJson) || "Fruit";
 
-// HEADER KATALOG
-
 let toggle = document.querySelector(".nav__toggle");
 let menu = document.querySelector("#katalog");
 let hamburgerTop = document.querySelector(".hamburger-top");
@@ -67,19 +65,16 @@ toggleBottom.addEventListener("click", () => {
 let catalogRow = document.querySelector(".catalog-rendering");
 
 function mappingCategories() {
-  catalogRow.innerHTML = ""
-  categories.map(({id, name}) => {
+  catalogRow.innerHTML = "";
+  categories.map(({ name }) => {
     return (catalogRow.innerHTML += `
-      <li><a onclick="setCategory(${name})" href="/pages/category.html">${name}</a></li>
+      <li><a onclick="setCategory('${name}')" href="/pages/category.html">${name}</a></li>
     `);
   });
 }
 
 mappingCategories();
 
-function setCategory(cate) {
-  let curCategory = categories.find(ca => ca.name == cate)
-  localStorage.setItem("category", JSON.stringify(curCategory));
+function setCategory(name) {
+  localStorage.setItem("category", name);
 }
-
-// ADD TO CART

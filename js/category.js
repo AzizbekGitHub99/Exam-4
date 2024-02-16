@@ -2,16 +2,15 @@ let categoryRow = document.querySelector(".category__row");
 let categoryName = document.getElementsByClassName("category__name");
 
 function renderCategoryPage() {
-  let curCate = JSON.parse(localStorage.getItem("category")) || {
-    name: "Dinner",
-  };
+  let curCate = localStorage.getItem("category") || "Dinner";
+  console.log(curCate);
   categoryRow.innerHTML = " ";
   for (let i = 0; i < categoryName.length; i++) {
-    categoryName[i].textContent = curCate.name;
+    categoryName[i].textContent = curCate;
   }
 
   let currentCategoryProducts = products.filter(
-    (el) => el.category === curCate.name
+    (el) => el.category === curCate
   );
 
   currentCategoryProducts.map((el) => {
