@@ -128,8 +128,12 @@ header .nav__toggle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #70c05b;
   border-radius: 4px;
+  width: 120px;
   cursor: pointer;
 }
 @media (max-width: 700px) {
@@ -137,13 +141,14 @@ header .nav__toggle {
     display: none;
   }
 }
-header .nav__toggle button {
+header .nav__toggle__btn {
   padding: 8px 0 8px 8px;
   border-radius: 4px;
+  width: 30%;
   background-color: transparent;
   position: relative;
 }
-header .nav__toggle button span {
+header .nav__toggle__btn span {
   display: block;
   position: absolute;
   width: 25px;
@@ -153,20 +158,19 @@ header .nav__toggle button span {
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
-header .nav__toggle button .hamburger-top {
+header .nav__toggle__btn .hamburger-top {
   top: 0;
 }
-header .nav__toggle button .hamburger-center {
+header .nav__toggle__btn .hamburger-center {
   top: 40%;
   bottom: 25%;
 }
-header .nav__toggle button .hamburger-bottom {
+header .nav__toggle__btn .hamburger-bottom {
   bottom: 1.2px;
 }
 header .nav__toggle a {
-  width: 92px;
+  width: 70%;
   height: 44px;
-  margin-left: 25px;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;

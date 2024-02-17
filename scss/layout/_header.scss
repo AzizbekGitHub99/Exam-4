@@ -62,15 +62,18 @@ header {
       display: flex;
       gap: 8px;
       align-items: center;
+      justify-content: space-between;
       background-color: var.$secondary-color;
       border-radius: 4px;
+      width: 120px;
       cursor: pointer;
       @media (max-width: 700px) {
         display: none;
       }
-      button {
+      &__btn {
         padding: 8px 0 8px 8px;
         border-radius: 4px;
+        width: 30%;
         background-color: transparent;
         position: relative;
         span {
@@ -94,9 +97,8 @@ header {
         }
       }
       a {
-        width: 92px;
+        width: 70%;
         height: 44px;
-        margin-left: 25px;
         color: var.$white-color;
         display: flex;
         justify-content: center;

@@ -1,9 +1,8 @@
 let currentIdJson = localStorage.getItem("currentProd");
 let currentId = JSON.parse(currentIdJson) || 0;
-let currentCategoryJson = localStorage.getItem("category");
-let currentCategory = JSON.parse(currentCategoryJson) || "Fruit";
+let currentCategory = localStorage.getItem("category");
 
-let toggle = document.querySelector(".nav__toggle");
+let toggle = document.querySelector(".nav__toggle__btn");
 let menu = document.querySelector("#katalog");
 let hamburgerTop = document.querySelector(".hamburger-top");
 let hamburgerCenter = document.querySelector(".hamburger-center");
@@ -11,6 +10,7 @@ let hamburgerBottom = document.querySelector(".hamburger-bottom");
 let isOpen = false;
 
 toggle.addEventListener("click", () => {
+  console.log("click");
   isOpen = !isOpen;
   if (isOpen) {
     menu.style.top = "70px";
@@ -48,9 +48,8 @@ toggle.addEventListener("click", () => {
 
 // HEADER BOTTOM KATALOG
 
-const katalogBottom = document.getElementById("katalog__bottom");
-const toggleBottom = document.getElementById("toggle__bottom");
-const main = document.getElementById("main");
+let katalogBottom = document.getElementById("katalog__bottom");
+let toggleBottom = document.getElementById("toggle__bottom");
 
 toggleBottom.addEventListener("click", () => {
   isOpen = !isOpen;
@@ -76,5 +75,6 @@ function mappingCategories() {
 mappingCategories();
 
 function setCategory(name) {
+  mappingCategories();
   localStorage.setItem("category", name);
 }
