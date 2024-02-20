@@ -45,9 +45,11 @@ header {
   right: 0;
   left: 0;
   background-color: #fff;
-  z-index: 100;
+  z-index: 10;
 }
 header .nav {
+  position: relative;
+  background-color: white;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -237,6 +239,12 @@ header .nav__end {
           align-items: center;
   gap: 10px;
   margin-left: 15px;
+  cursor: pointer;
+}
+header .nav__end img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 @media (max-width: 700px) {
   header .nav__end img {
@@ -562,6 +570,102 @@ header .nav__items__basket span {
 .searching__content .search__product:hover .search__product__img {
   -webkit-transform: scale(1.09);
           transform: scale(1.09);
+}
+
+#modal {
+  position: fixed;
+  z-index: 100;
+}
+#modal .modal__background {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: rgba(252, 213, 186, 0.8);
+  display: grid;
+  place-items: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+#modal .modal__background .modal__dialog {
+  border-radius: 10px;
+  height: 430px;
+  width: 430px;
+  background-color: white;
+}
+#modal .modal__background .modal__dialog__header {
+  height: 20%;
+  text-align: end;
+}
+#modal .modal__background .modal__dialog__body {
+  padding: 0 80px 40px;
+  height: 80%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+#modal .modal__background .modal__dialog__body h3 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#modal .modal__background .modal__dialog__body form {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+#modal .modal__background .modal__dialog__body form label input {
+  height: 40px;
+  width: 100%;
+  font-size: 20px;
+}
+#modal .modal__background .modal__dialog__body form input:nth-child(3) {
+  height: 40px;
+  width: 100%;
+  font-size: 20px;
+  background: #ff6633;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+#modal .modal__background .modal__dialog__body form input:nth-child(3):focus {
+  border: none;
+}
+
+.user__dropdown {
+  position: absolute;
+  right: 100px;
+  top: -50px;
+  padding: 50px 20px 30px;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  z-index: -5;
+}
+.user__dropdown button {
+  cursor: pointer;
+  background-color: crimson;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+}
+
+.show__dropdown {
+  top: 50px;
 }
 
 footer {

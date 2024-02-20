@@ -7,8 +7,10 @@ header {
   right: 0;
   left: 0;
   background-color: var.$white-color;
-  z-index: 100;
+  z-index: 10;
   .nav {
+    position: relative;
+    background-color: white;
     height: 100%;
     display: flex;
     align-items: center;
@@ -146,7 +148,11 @@ header {
       align-items: center;
       gap: 10px;
       margin-left: 15px;
+      cursor: pointer;
       img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
         @media (max-width: 700px) {
           display: none;
         }
@@ -223,7 +229,7 @@ header {
     gap: 24px;
     height: 100%;
     width: 100%;
-    li{
+    li {
       width: 24%;
       a {
         color: var.$text-color;
@@ -391,4 +397,90 @@ header {
   .search__product:hover .search__product__img {
     transform: scale(1.09);
   }
+}
+
+#modal {
+  position: fixed;
+  z-index: 100;
+  .modal__background {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: #fcd5bacc;
+    display: grid;
+    place-items: center;
+    transform: scale(0);
+    transition: transform 0.3s linear;
+    .modal__dialog {
+      border-radius: 10px;
+      height: 430px;
+      width: 430px;
+      background-color: white;
+      &__header {
+        height: 20%;
+        text-align: end;
+      }
+      &__body {
+        padding: 0 80px 40px;
+        height: 80%;
+        justify-content: space-around;
+        h3 {
+          font-size: 24px;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+        form {
+          margin-top: 30px;
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 20px;
+          label {
+            input {
+              height: 40px;
+              width: 100%;
+              font-size: 20px;
+            }
+          }
+          input {
+            &:nth-child(3) {
+              height: 40px;
+              width: 100%;
+              font-size: 20px;
+              background: #ff6633;
+              border-radius: 5px;
+              color: white;
+              border: none;
+              &:focus {
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.user__dropdown {
+  position: absolute;
+  right: 100px;
+  top: -50px;
+  padding: 50px 20px 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  transition: all 0.4s linear;
+  z-index: -5;
+  button {
+    cursor: pointer;
+    background-color: crimson;
+    display: flex;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+}
+.show__dropdown {
+  top: 50px;
 }

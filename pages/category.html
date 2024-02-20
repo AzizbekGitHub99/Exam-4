@@ -19,14 +19,14 @@
     </div>
     <header>
       <nav class="nav container__1250">
-        <div class="nav__logo">
+        <a href="/index.html" class="nav__logo">
           <img
             class="logo-original"
             src="/assets/images/logo.svg"
             alt="logotip"
           />
           <img class="logo-mini" src="/assets/images/logo-mini.svg" alt="" />
-        </div>
+        </a>
         <div class="nav__row">
           <div class="nav__toggle">
             <button class="nav__toggle__btn">
@@ -72,11 +72,26 @@
               </a>
             </div>
           </ul>
-          <div class="nav__end">
-            <img src="/assets/images/nav-avatar.svg" alt="" />
-            <h1>Алексей</h1>
-            <button><img src="/assets/images/nav-down.svg" alt="" /></button>
-          </div>
+          <div class="nav__end"></div>
+        </div>
+        <div class="user__dropdown">
+          <button onclick="exitLogin()">
+            Выйти
+            <svg
+              width="30px"
+              height="30px"
+              viewBox="0 0 15 15"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3 1C2.44771 1 2 1.44772 2 2V13C2 13.5523 2.44772 14 3 14H10.5C10.7761 14 11 13.7761 11 13.5C11 13.2239 10.7761 13 10.5 13H3V2L10.5 2C10.7761 2 11 1.77614 11 1.5C11 1.22386 10.7761 1 10.5 1H3ZM12.6036 4.89645C12.4083 4.70118 12.0917 4.70118 11.8964 4.89645C11.7012 5.09171 11.7012 5.40829 11.8964 5.60355L13.2929 7H6.5C6.22386 7 6 7.22386 6 7.5C6 7.77614 6.22386 8 6.5 8H13.2929L11.8964 9.39645C11.7012 9.59171 11.7012 9.90829 11.8964 10.1036C12.0917 10.2988 12.4083 10.2988 12.6036 10.1036L14.8536 7.85355C15.0488 7.65829 15.0488 7.34171 14.8536 7.14645L12.6036 4.89645Z"
+                fill="#000000"
+              />
+            </svg>
+          </button>
         </div>
       </nav>
     </header>
@@ -85,43 +100,84 @@
         <ul class="nav__bottom__row">
           <li>
             <button id="toggle__bottom">
-              <img src="../assets/images/menu-bottom.svg" alt="" />Каталог
+              <img src="assets/images/menu-bottom.svg" alt="" />Каталог
             </button>
           </li>
           <li>
             <a href="/pages/favorite.html"
-              ><img src="../assets/images/like-icon.svg" alt="" />Избранное</a
+              ><img src="assets/images/like-icon.svg" alt="" />Избранное</a
             >
           </li>
           <li>
             <a href="/pages/favorite.html"
-              ><img src="../assets/images/product-icon.svg" alt="" />Заказы</a
+              ><img src="assets/images/product-icon.svg" alt="" />Заказы</a
             >
           </li>
           <li class="basket__zero">
             <span class="plus2 cart__quantity">0</span>
             <a href="/pages/cart.html"
-              ><img src="../assets/images/basket.svg" alt="" />Корзина</a
+              ><img src="assets/images/basket.svg" alt="" />Корзина</a
             >
           </li>
           <li>
-            <img src="../assets/images/nav-avatar.svg" alt="" />
+            <img src="assets/images/nav-avatar.svg" alt="" />
           </li>
         </ul>
       </nav>
     </header>
     <div id="header__bottom__links">
       <div id="katalog__bottom">
-        <a href="./products.html">Все продукты</a>
-        <a href="./categories.html">Категории </a>
-        <a href="./category.html">Категория </a>
-        <a href="./product.html">Товар </a>
-        <a href="./favorite.html">Избраное </a>
-        <a href="./cart.html">Корзина </a>
-        <a href="./about.html">О нас</a>
-        <a href="./contact.html">Контакты </a>
-        <a href="./vacancy.html">Вакансии </a>
-        <a href="./articles.html">Статьи </a>
+        <a href="/pages/products.html">Все продукты</a>
+        <a href="/pages/categories.html">Категории </a>
+        <a href="/pages/category.html">Категория </a>
+        <a href="/pages/product.html">Товар </a>
+        <a href="/pages/favorite.html">Избраное </a>
+        <a href="/pages/cart.html">Корзина </a>
+        <a href="/pages/about.html">О нас</a>
+        <a href="/pages/contact.html">Контакты </a>
+        <a href="/pages/vacancy.html">Вакансии </a>
+        <a href="/pages/articles.html">Статьи </a>
+      </div>
+    </div>
+    <div id="modal" onclick="closeModal()">
+      <div class="modal__background">
+        <div class="modal__dialog">
+          <div class="modal__dialog__header">
+            <svg
+              onclick="closeModal()"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="40" height="40" rx="4" fill="#F3F2F1" />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M26.3536 13.6464C26.5488 13.8417 26.5488 14.1583 26.3536 14.3536L14.3536 26.3536C14.1583 26.5488 13.8417 26.5488 13.6464 26.3536C13.4512 26.1583 13.4512 25.8417 13.6464 25.6464L25.6464 13.6464C25.8417 13.4512 26.1583 13.4512 26.3536 13.6464Z"
+                fill="#414141"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.6464 13.6464C13.8417 13.4512 14.1583 13.4512 14.3536 13.6464L26.3536 25.6464C26.5488 25.8417 26.5488 26.1583 26.3536 26.3536C26.1583 26.5488 25.8417 26.5488 25.6464 26.3536L13.6464 14.3536C13.4512 14.1583 13.4512 13.8417 13.6464 13.6464Z"
+                fill="#414141"
+              />
+            </svg>
+          </div>
+          <div class="modal__dialog__body">
+            <h3>Вход</h3>
+            <form class="modal__form">
+              <label for="user-name">
+                Имя <br />
+                <input id="user-name" type="text" />
+              </label>
+              <input type="file" accept="image/*" />
+              <input type="submit" value="Вход" />
+            </form>
+          </div>
+        </div>
       </div>
     </div>
     <main id="main">
